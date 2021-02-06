@@ -1,0 +1,307 @@
+/*
+font-family: 'Nunito', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(80, 80, 80);
+}
+
+::-webkit-scrollbar-thumb {
+    /* border-radius: 50%; */
+    background: linear-gradient(to top, #2871FF, #3430FF, #9E22FF);
+    
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to top, rgb(15, 42, 95), rgb(20, 19, 105), rgb(78, 14, 128));
+}
+
+/* body */
+body {
+    background: rgb(43, 43, 43);
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header */
+header {
+    background: rgba(43, 43, 43, 0.8);
+    width: 100%;
+}
+
+header .decorationShape {
+    background: linear-gradient(90deg, #2871FF 0%, #3430FF 48.7%, #9E22FF 100%);
+    width: 100%;
+    height: 10px;
+}
+
+header .navigation {
+    width: 100%;
+
+    margin: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+header .navigation .navgationLinks {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+header .navigation .navgationLinks a {
+    font-size: 22px;
+    text-decoration: none;
+    color: inherit;
+}
+
+header .navigation .navgationLinks a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* section1 */
+#section1 {
+    max-width: 933px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 210px;
+}
+
+#section1 .intro {
+    margin-left: 20px;
+
+    align-content: center;
+}
+
+#section1 .intro h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    
+    color: transparent;
+    background: linear-gradient(90deg, #9E22FF 0%, #3430FF 48.7%, #2871FF 100%);
+    -webkit-background-clip: text;
+}
+
+#section1 .intro .iconsDiv {
+    width: 200px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#section1 .intro .iconsDiv a img:hover {
+    width: 35px;
+    height: 35px;
+}
+
+#section1 .image {
+    margin-right: 20px;
+
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+/* red & blue text */
+.redText {
+    color: #ED5058;
+}
+
+.blueText {
+    color: #4B9EF3;
+}
+
+/* section2 */
+#section2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    background-image: url(images/section2-background-shape.svg);
+    color: black;
+
+    margin-top: 210px;
+
+    padding: 20px;
+}
+
+#section2 .section2Content {
+    max-width: 933px;
+
+    margin: 51px auto;
+}
+
+#section2 .section2Content h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+
+    margin-bottom: 4px;
+}
+
+#section2 .section2Content h3 {
+    font-size: 22px;
+
+    margin: 0;
+}
+
+#section2 .section2Content .institution {
+    font-size: 17px;
+
+    margin-bottom: 2px;
+}
+
+#section2 .section2Content .status {
+    font-size: 12px;
+}
+
+#section2 .section2Content #statusCurso {
+    max-width: 159px;
+    margin-left: auto;
+    text-align: start;
+}
+
+/* section3 */
+#section3 {
+    max-width: 933px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 210px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section3 h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 35px;
+}
+
+#section3 h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+#section3 .iconsGrid {
+    max-width: 580px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#section3 .iconsGrid span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section3 .blueText {
+    margin-top: 40px;
+}
+
+#section3 .knowledgesGrid {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#section3 .knowledgesGrid span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: fit-content;
+}
+
+#section3 .knowledgesGrid p {
+    font-size: 17px;
+}
+
+/* section4 */
+#section4 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    background-image: url(images/section4-background-shape.svg);
+    color: black;
+
+    margin-top: 210px;
+
+    padding: 80px 20px;
+}
+
+#section4 .section4Content {
+    max-width: 933px;
+    min-height: 265px;
+
+    margin: auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#section4 .section4Content h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    
+    color: transparent;
+    background: linear-gradient(90deg, #9E22FF 0%, #3430FF 48.7%, #2871FF 100%);
+    -webkit-background-clip: text;
+}
+
+#section4 .section4Content .contactInfoGrid {
+    max-width: 814px;
+}
+
+#section4 .section4Content .contactInfoGrid a, #section4 .section4Content .contactInfoGrid span {
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section4 .section4Content .contactInfoGrid a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#section4 .section4Content .contactInfoGrid img {
+    margin-right: 5px;
+}
+
+/* footer */
+footer {
+    margin: 20px;
+
+    text-align: center;
+    font-size: 15px;
+}
+
+footer a {
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
