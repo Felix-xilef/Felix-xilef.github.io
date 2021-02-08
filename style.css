@@ -1,8 +1,3 @@
-/*
-font-family: 'Nunito', sans-serif;
-font-family: 'Roboto', sans-serif;
-*/
-
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -13,7 +8,6 @@ font-family: 'Roboto', sans-serif;
 }
 
 ::-webkit-scrollbar-thumb {
-    /* border-radius: 50%; */
     background: linear-gradient(to top, #2871FF, #3430FF, #9E22FF);
     
     border-radius: 5px;
@@ -30,6 +24,15 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* sections top & bottom backgrouns */
+.section2BackgroundTop, .section2BackgroundBottom, .section4BackgroundTop {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+    height: 50px;
+}
+
 /* header */
 header {
     background: rgba(43, 43, 43, 0.8);
@@ -42,30 +45,13 @@ header .decorationShape {
     height: 10px;
 }
 
-header .navigation {
-    width: 100%;
-
-    margin: 10px;
-
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+header .navgationLinks {
+    margin-left: auto;
+    margin-right: 0!important;
 }
 
-header .navigation .navgationLinks {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-}
-
-header .navigation .navgationLinks a {
-    font-size: 22px;
-    text-decoration: none;
-    color: inherit;
-}
-
-header .navigation .navgationLinks a:hover {
-    color: rgba(255, 255, 255, 0.5);
+header .navgationLinks a {
+    font-size: 20px;
 }
 
 /* section1 */
@@ -74,15 +60,11 @@ header .navigation .navgationLinks a:hover {
 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 210px;
 }
 
-#section1 .intro {
-    margin-left: 20px;
-
-    align-content: center;
+#section1 .row {
+    margin: 0 20px;
 }
-
 #section1 .intro h1 {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
@@ -94,8 +76,8 @@ header .navigation .navgationLinks a:hover {
 }
 
 #section1 .intro .iconsDiv {
-    width: 200px;
     height: 35px;
+    width: 200px;
 
     display: flex;
     align-items: center;
@@ -108,11 +90,9 @@ header .navigation .navgationLinks a:hover {
 }
 
 #section1 .image {
-    margin-right: 20px;
-
     display: flex;
     align-content: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 /* red & blue text */
@@ -125,22 +105,25 @@ header .navigation .navgationLinks a:hover {
 }
 
 /* section2 */
+.section2BackgroundTop {
+    background-image: url(images/section2-background-shape-top.svg);
+}
+
+.section2BackgroundBottom {
+    background-image: url(images/section2-background-shape-bottom.svg);
+}
+
 #section2 {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    background-image: url(images/section2-background-shape.svg);
+    background-color: #E9E8E8;
     color: black;
 
-    margin-top: 210px;
-
-    padding: 20px;
+    padding: 0 20px;
 }
 
 #section2 .section2Content {
     max-width: 933px;
 
-    margin: 51px auto;
+    margin: auto;
 }
 
 #section2 .section2Content h2 {
@@ -179,7 +162,6 @@ header .navigation .navgationLinks a:hover {
 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 210px;
 
     display: flex;
     flex-direction: column;
@@ -231,16 +213,17 @@ header .navigation .navgationLinks a:hover {
 }
 
 /* section4 */
+.section4BackgroundTop {
+    background-image: url(images/section4-background-shape-top.svg);
+}
+
 #section4 {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    background-image: url(images/section4-background-shape.svg);
+    background-color: #E9E8E8;
     color: black;
 
-    margin-top: 210px;
-
-    padding: 80px 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 #section4 .section4Content {
@@ -304,4 +287,58 @@ footer a {
 
 footer a:hover {
     color: rgba(255, 255, 255, 0.5);
+}
+
+/* 
+    "desktop"
+*/
+@media (min-width: 576px), (orientation: landscape) {
+    /* section1 */
+    #section1 {
+        margin-top: 210px;
+    }
+
+    /* section2 */
+    .section2BackgroundTop {
+        margin-top: 210px;
+    }
+
+    /* section3 */
+    #section3 {
+        margin-top: 210px;
+    }
+
+    /* section4 */
+    .section4BackgroundTop {
+        margin-top: 210px;
+    }
+}
+
+/* 
+    "mobile"
+*/
+@media (max-width: 575px) and (orientation: portrait) {
+    /* section1 */
+    #section1 {
+        margin-top: 110px;
+    }
+    
+    #section1 .intro {
+        margin-top: 30px;
+    }
+
+    /* section2 */
+    .section2BackgroundTop {
+        margin-top: 110px;
+    }
+
+    /* section3 */
+    #section3 {
+        margin-top: 110px;
+    }
+
+    /* section4 */
+    .section4BackgroundTop {
+        margin-top: 110px;
+    }
 }
