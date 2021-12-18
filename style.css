@@ -1,6 +1,22 @@
+/* Google Fonts
+
+    Usage:
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Roboto', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --gradient-blue: #4776E6;
+    --gradient-dark-blue: rgba(71, 119, 230, 0.4);
+    
+    --gradient-purple: #8E54E9;
+    --gradient-dark-purple: rgba(141, 84, 233, 0.4);
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -8,13 +24,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #2871FF, #3430FF, #9E22FF);
-    
-    border-radius: 5px;
+    background: linear-gradient(to top, var(--gradient-blue), var(--gradient-purple));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to top, rgb(15, 42, 95), rgb(20, 19, 105), rgb(78, 14, 128));
+    background: linear-gradient(to top, var(--gradient-dark-blue), var(--gradient-dark-purple));
 }
 
 /* body */
@@ -40,7 +54,7 @@ header {
 }
 
 header .decorationShape {
-    background: linear-gradient(90deg, #2871FF 0%, #3430FF 48.7%, #9E22FF 100%);
+    background: linear-gradient(to right, var(--gradient-blue), var(--gradient-purple));
     width: 100%;
     height: 10px;
 }
@@ -71,8 +85,9 @@ header .navgationLinks a {
     font-size: 45px;
     
     color: transparent;
-    background: linear-gradient(90deg, #9E22FF 0%, #3430FF 48.7%, #2871FF 100%);
+    background: linear-gradient(90deg, var(--gradient-purple), var(--gradient-blue));
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 #section1 .intro .iconsDiv {
@@ -244,8 +259,9 @@ header .navgationLinks a {
     font-size: 45px;
     
     color: transparent;
-    background: linear-gradient(90deg, #9E22FF 0%, #3430FF 48.7%, #2871FF 100%);
+    background: linear-gradient(90deg, var(--gradient-purple), var(--gradient-blue));
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 #section4 .section4Content .contactInfoGrid {
