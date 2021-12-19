@@ -7,11 +7,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
+    --foreground: #f5f5f5;
+    --dark-foreground: #cccccc;
+
+    --background: rgb(43, 43, 43);
+
     --gradient-blue: #4776E6;
-    --gradient-dark-blue: rgba(71, 119, 230, 0.4);
+    --gradient-dark-blue: rgba(71, 119, 230, 0.6);
     
     --gradient-purple: #8E54E9;
-    --gradient-dark-purple: rgba(141, 84, 233, 0.4);
+    --gradient-dark-purple: rgba(141, 84, 233, 0.6);
 }
 
 /* scrollbar */
@@ -33,13 +38,29 @@
 
 /* body */
 body {
-    background: rgb(43, 43, 43);
-    color: #FFFFFF;
+    background: var(--background);
+    color: var(--foreground);
     font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+.text-gradient, a {
+    color: transparent;
+    background: linear-gradient(90deg, var(--gradient-purple), var(--gradient-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-decoration: none;
+}
+
+a:hover {
+    color: transparent;
+    background: linear-gradient(90deg, var(--gradient-dark-purple), var(--gradient-dark-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /* sections top & bottom backgrouns */
-.section2BackgroundTop, .section2BackgroundBottom, .section4BackgroundTop {
+.educationSectionBackgroundTop, .educationSectionBackgroundBottom, .section4BackgroundTop {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -53,62 +74,95 @@ header {
     width: 100%;
 }
 
-header .decorationShape {
+header hr {
     background: linear-gradient(to right, var(--gradient-blue), var(--gradient-purple));
-    width: 100%;
-    height: 10px;
+    height: 8px !important;
+    opacity: 1;
+    margin: 0;
+    border: none;
 }
 
-header .navgationLinks {
-    margin-left: auto;
-    margin-right: 0!important;
+/* Toggle button icon */
+header .navbar-toggler {
+    transition: all 0.2s;
+    border-color: var(--dark-foreground);
 }
 
+header .navbar-toggler:hover {
+    background: rgba(133, 133, 133, 0.2);
+}
+
+header .navbar-toggler:focus {
+    box-shadow: none;
+    border-color: var(--foreground);
+}
+
+header .navbar-toggler .toggle-icon {
+    aspect-ratio: 8/7;
+}
+
+header .navbar-toggler .toggle-icon span {
+    display: block;
+    height: 4px;
+    width: 30px;
+    transition: all 0.2s;
+    background-color: var(--dark-foreground);
+    border-radius: 2px;
+}
+
+header .navbar-toggler:focus .toggle-icon span {
+    background-color: var(--foreground);
+}
+
+header .navbar-toggler:not(.collapsed) .toggle-icon span:first-child {
+    transform: rotate(41.18deg) scaleX(1.32);
+    transform-origin: 6% 10%;
+}
+
+header .navbar-toggler:not(.collapsed) .toggle-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+header .navbar-toggler:not(.collapsed) .toggle-icon span:last-child {
+    transform: rotate(-41.18deg) scaleX(1.32);
+    transform-origin: 10% 90%;
+}
+
+/* Navigation links */
 header .navgationLinks a {
     font-size: 20px;
+    color: var(--dark-foreground) !important;
 }
 
-/* section1 */
-#section1 {
-    max-width: 933px;
-
-    margin-left: auto;
-    margin-right: auto;
+header .navgationLinks a:hover {
+    color: var(--foreground) !important;
 }
 
-#section1 .row {
-    margin: 0 20px;
+/* Introduction Section */
+main section:first-child .image div {
+    z-index: -1;
+    background: linear-gradient(135deg, var(--gradient-blue), var(--gradient-purple));
 }
-#section1 .intro h1 {
+
+main section:first-child .image div img {
+    background: var(--background);
+}
+
+main section:first-child .intro h1 {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: 45px;
-    
-    color: transparent;
-    background: linear-gradient(90deg, var(--gradient-purple), var(--gradient-blue));
-    -webkit-background-clip: text;
-    background-clip: text;
 }
 
-#section1 .intro .iconsDiv {
-    height: 35px;
-    width: 200px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+main section:first-child .intro div svg:not(:hover) {
+    fill: var(--foreground);
 }
 
-#section1 .intro .iconsDiv a img:hover {
-    width: 35px;
-    height: 35px;
+main section:first-child .intro div svg:not(:hover) rect {
+    fill: none;
 }
 
-#section1 .image {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
+/* educationSection */
 
 /* red & blue text */
 .redText {
@@ -119,29 +173,28 @@ header .navgationLinks a {
     color: #4B9EF3;
 }
 
-/* section2 */
-.section2BackgroundTop {
-    background-image: url(images/section2-background-shape-top.svg);
+.educationSectionBackgroundTop {
+    background-image: url(images/educationSection-background-shape-top.svg);
 }
 
-.section2BackgroundBottom {
-    background-image: url(images/section2-background-shape-bottom.svg);
+.educationSectionBackgroundBottom {
+    background-image: url(images/educationSection-background-shape-bottom.svg);
 }
 
-#section2 {
+#educationSection {
     background-color: #E9E8E8;
     color: black;
 
     padding: 0 20px;
 }
 
-#section2 .section2Content {
+#educationSection .educationSectionContent {
     max-width: 933px;
 
     margin: auto;
 }
 
-#section2 .section2Content h2 {
+#educationSection .educationSectionContent h2 {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: 35px;
@@ -149,23 +202,23 @@ header .navgationLinks a {
     margin-bottom: 4px;
 }
 
-#section2 .section2Content h3 {
+#educationSection .educationSectionContent h3 {
     font-size: 22px;
 
     margin: 0;
 }
 
-#section2 .section2Content .institution {
+#educationSection .educationSectionContent .institution {
     font-size: 17px;
 
     margin-bottom: 2px;
 }
 
-#section2 .section2Content .status {
+#educationSection .educationSectionContent .status {
     font-size: 12px;
 }
 
-#section2 .section2Content #statusCurso {
+#educationSection .educationSectionContent #statusCurso {
     max-width: 159px;
     margin-left: auto;
     text-align: start;
@@ -308,14 +361,14 @@ footer a:hover {
 /* 
     "desktop"
 */
-@media (min-width: 576px), (orientation: landscape) {
-    /* section1 */
-    #section1 {
+@media (min-width: 768px) {
+    /* main section:first-child */
+    main {
         margin-top: 210px;
     }
 
-    /* section2 */
-    .section2BackgroundTop {
+    /* educationSection */
+    .educationSectionBackgroundTop {
         margin-top: 210px;
     }
 
@@ -333,18 +386,18 @@ footer a:hover {
 /* 
     "mobile"
 */
-@media (max-width: 575px) and (orientation: portrait) {
-    /* section1 */
-    #section1 {
+@media (max-width: 767px) {
+    /* main section:first-child */
+    main {
         margin-top: 110px;
     }
     
-    #section1 .intro {
+    main section:first-child .intro {
         margin-top: 30px;
     }
 
-    /* section2 */
-    .section2BackgroundTop {
+    /* educationSection */
+    .educationSectionBackgroundTop {
         margin-top: 110px;
     }
 
