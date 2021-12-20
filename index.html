@@ -126,57 +126,26 @@
                     </div>
                 </section>
         
-                <div class="educationSectionBackgroundTop"></div>
-                <section id="educationSection">
-                    <div class="educationSectionContent">
-                        <div class="row">
-                            <div class="col-sm">
-                                <h2 class="redText">Ensino Superior</h2>
-                                <h3>Análise e Desenvolvimento de Sistemas</h3>
-                                <p class="institution">Fatec São Caetano do Sul - Antônio Russo</p>
-                                <p class="status text-end">
-                                    Status: Cursando
+                <section class="row row-cols-1 row-cols-md-2 gap-4 gap-md-0 w-100 mx-0 px-5">
+                    <div v-for="(eduItem, eduIndex) in education" :key="'education' + eduIndex" class="col">
+                        <h2 class="mb-0" :class="eduItem.color">{{ eduItem.type }}</h2>
+
+                        <div v-for="(subItem, subIndex) in eduItem.content" :key="'education' + eduIndex + '-item' + subIndex" class="mt-2">
+                            <h3 class="m-0">{{ subItem.heading }}</h3>
+    
+                            <p class="mb-1 subheading">{{ subItem.subheading }}</p>
+    
+                            <p v-if="subItem.status" class="text-end status">
+                                {{ subItem.status }}
+
+                                <template v-if="subItem.extra">
                                     <br>
-                                    Previsão de conclusão: 12/2021
-                                </p>
-                            </div>
-                            <div class="col-sm text-end mt-5 mt-sm-0">
-                                <h2 class="blueText">Curso</h2>
-                                <h3>Linux Essentials</h3>
-                                <p class="institution">CISCO</p>
-                                <p class="status" id="statusCurso">
-                                    Finalizado em
-                                    <br>
-                                    Dez. de 2020
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm order-sm-last text-sm-end mt-5">
-                                <h2 class="redText">Idiomas</h2>
-                                <h3>Inglês</h3>
-                                <p class="institution">Avançado</p>
-            
-                                <h3>Espanhol</h3>
-                                <p class="institution">Avançado</p>
-            
-                                <h3>Japonês</h3>
-                                <p class="institution">Básico</p>
-                            </div>
-                            <div class="col-sm text-end text-sm-start mt-5">
-                                <h2 class="blueText">Certificação</h2>
-                                <h3>Certificação em Teste de Software CTFL</h3>
-                                <p class="institution">BSTQB</p>
-                                <p class="status text-end">
-                                    Emitido em Maio de 2019
-                                    <br>
-                                    N° do Certificado: 19-CTFL-09207-BR
-                                </p>
-                            </div>
+                                    {{ subItem.extra }}
+                                </template>
+                            </p>
                         </div>
                     </div>
                 </section>
-                <div class="educationSectionBackgroundBottom"></div>
         
                 <section id="section3">
                     <h2 class="redText">Linguagens</h2>

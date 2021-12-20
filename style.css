@@ -9,8 +9,11 @@
 :root {
     --foreground: #f5f5f5;
     --dark-foreground: #cccccc;
+    --red-foreground: #ED5058;
+    --blue-foreground: #4B9EF3;
 
-    --background: rgb(43, 43, 43);
+    --background-dark: #2b2b2b;
+    --background-light: #E9E8E8;
 
     --gradient-blue: #4776E6;
     --gradient-dark-blue: rgba(71, 119, 230, 0.6);
@@ -38,7 +41,7 @@
 
 /* body */
 body {
-    background: var(--background);
+    background: var(--background-dark);
     color: var(--foreground);
     font-family: 'Roboto', sans-serif;
     text-align: justify;
@@ -60,7 +63,7 @@ a:hover {
 }
 
 /* sections top & bottom backgrouns */
-.educationSectionBackgroundTop, .educationSectionBackgroundBottom, .section4BackgroundTop {
+.section4BackgroundTop {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -145,7 +148,7 @@ main section:first-child .image div {
 }
 
 main section:first-child .image div img {
-    background: var(--background);
+    background: var(--background-dark);
 }
 
 main section:first-child .intro h1 {
@@ -162,66 +165,41 @@ main section:first-child .intro div svg:not(:hover) rect {
     fill: none;
 }
 
-/* educationSection */
-
-/* red & blue text */
-.redText {
-    color: #ED5058;
-}
-
-.blueText {
-    color: #4B9EF3;
-}
-
-.educationSectionBackgroundTop {
-    background-image: url(images/educationSection-background-shape-top.svg);
-}
-
-.educationSectionBackgroundBottom {
-    background-image: url(images/educationSection-background-shape-bottom.svg);
-}
-
-#educationSection {
-    background-color: #E9E8E8;
+/* Education Section */
+main section:nth-child(2) {
     color: black;
+    background-color: var(--background-light);
 
-    padding: 0 20px;
+    border-radius: 50% / 2em;
+
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
-#educationSection .educationSectionContent {
-    max-width: 933px;
-
-    margin: auto;
-}
-
-#educationSection .educationSectionContent h2 {
+main section:nth-child(2) h2 {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: 35px;
-
-    margin-bottom: 4px;
 }
 
-#educationSection .educationSectionContent h3 {
+main section:nth-child(2) h2.font-blue {
+    color: var(--blue-foreground);
+}
+
+main section:nth-child(2) h2.font-red {
+    color: var(--red-foreground);
+}
+
+main section:nth-child(2) h3 {
     font-size: 22px;
-
-    margin: 0;
 }
 
-#educationSection .educationSectionContent .institution {
+main section:nth-child(2) p.subheading {
     font-size: 17px;
-
-    margin-bottom: 2px;
 }
 
-#educationSection .educationSectionContent .status {
+main section:nth-child(2) p.status {
     font-size: 12px;
-}
-
-#educationSection .educationSectionContent #statusCurso {
-    max-width: 159px;
-    margin-left: auto;
-    text-align: start;
 }
 
 /* section3 */
@@ -286,7 +264,7 @@ main section:first-child .intro div svg:not(:hover) rect {
 }
 
 #section4 {
-    background-color: #E9E8E8;
+    background-color: var(--background-light);
     color: black;
 
     padding-right: 20px;
@@ -362,13 +340,13 @@ footer a:hover {
     "desktop"
 */
 @media (min-width: 768px) {
-    /* main section:first-child */
+    /* Main Section */
     main {
         margin-top: 210px;
     }
 
-    /* educationSection */
-    .educationSectionBackgroundTop {
+    /* Education Section */
+    main section:nth-child(2) {
         margin-top: 210px;
     }
 
@@ -387,18 +365,14 @@ footer a:hover {
     "mobile"
 */
 @media (max-width: 767px) {
-    /* main section:first-child */
+    /* Main Section */
     main {
         margin-top: 110px;
     }
-    
-    main section:first-child .intro {
-        margin-top: 30px;
-    }
 
-    /* educationSection */
-    .educationSectionBackgroundTop {
-        margin-top: 110px;
+    /* Education Section */
+    main section:nth-child(2) {
+        margin-top: 210px;
     }
 
     /* section3 */
