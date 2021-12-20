@@ -14,8 +14,8 @@
     </head>
     <body>
         <div id="app">
-            <header class="position-fixed top-0">
-                <hr/>
+            <header class="position-fixed top-0 w-100">
+                <hr class="border-0 m-0"/>
 
                 <nav class="navbar navbar-expand-md navbar-dark">
                     <div class="container-fluid">
@@ -24,7 +24,7 @@
                         </a>
 
                         <button
-                            class="navbar-toggler py-2 px-3"
+                            class="navbar-toggler py-2 px-3 collapsed"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbarToggledLinks"
@@ -50,7 +50,7 @@
                                 </li>
                                 
                                 <li  class="nav-item">
-                                    <a class="nav-link" href="#section3">Conhecimentos</a>
+                                    <a class="nav-link" href="#knowledgeSection">Conhecimentos</a>
                                 </li>
                                 
                                 <li  class="nav-item">
@@ -77,9 +77,9 @@
 
                         <p>
                             Formado em Análise e Desenvolvimento de Sistemas pela
-                            <a class="fw-bold" href="https://www.fatecsaocaetano.edu.br/" target="_blank">Fatec São Caetano do Sul</a>
+                            <a class="fw-bold text-gradient" href="https://www.fatecsaocaetano.edu.br/" target="_blank">Fatec São Caetano do Sul</a>
                             e atualmente estagiário na equipe de desenvolvimento da empresa
-                            <a class="fw-bold" href="https://smartstaff.com.br/" target="_blank">Smart Staff</a>
+                            <a class="fw-bold text-gradient" href="https://smartstaff.com.br/" target="_blank">Smart Staff</a>
                         </p>
 
                         <div class="d-flex gap-4">
@@ -126,11 +126,11 @@
                     </div>
                 </section>
         
-                <section class="row row-cols-1 row-cols-md-2 gap-4 gap-md-0 w-100 mx-0 px-5">
-                    <div v-for="(eduItem, eduIndex) in education" :key="'education' + eduIndex" class="col">
+                <section id="educationSection" class="row row-cols-1 row-cols-md-2 gap-4 gap-md-0 w-100 mx-0 px-4">
+                    <div v-for="(eduItem, i) in education" :key="`education-${i}`" class="col">
                         <h2 class="mb-0" :class="eduItem.color">{{ eduItem.type }}</h2>
 
-                        <div v-for="(subItem, subIndex) in eduItem.content" :key="'education' + eduIndex + '-item' + subIndex" class="mt-2">
+                        <div v-for="(subItem, j) in eduItem.content" :key="`education-${i}_item-${j}`" class="mt-2">
                             <h3 class="m-0">{{ subItem.heading }}</h3>
     
                             <p class="mb-1 subheading">{{ subItem.subheading }}</p>
@@ -147,94 +147,33 @@
                     </div>
                 </section>
         
-                <section id="section3">
-                    <h2 class="redText">Linguagens</h2>
-                    <div class="iconsGrid">
-                        <div class="row row-cols-sm-4">
-                            <span class="col mt-3 mt-sm-1">
-                                <img src="images/html5-icon.svg" alt="HTML5 icon">
-                                <h3>HTML5</h3>
-                            </span>
-                            <span class="col mt-3 mt-sm-1">
-                                <img src="images/css3-icon.svg" alt="CSS3 icon">
-                                <h3>CSS3</h3>
-                            </span>
-                            <span class="col mt-3 mt-sm-1">
-                                <img src="images/javascript-icon.svg" alt="JavaScript icon">
-                                <h3>JavaScript</h3>
-                            </span>
-                            <span class="col mt-3 mt-sm-1">
-                                <img src="images/typescript-icon.svg" alt="TypeScript icon">
-                                <h3>TypeScript</h3>
-                            </span>
-                            <!-- row2: -->
-                            <span class="col mt-3">
-                                <img src="images/java-icon.svg" alt="Java icon">
-                                <h3>Java</h3>
-                            </span>
-                            <span class="col mt-3">
-                                <img src="images/python-icon.svg" alt="Python icon">
-                                <h3>Python</h3>
-                            </span>
-                            <span class="col mt-3">
-                                <img src="images/c-cpp-icon.svg" alt="C & C++ icon">
-                                <h3>C/C++</h3>
-                            </span>
-                            <span class="col mt-3">
-                                <img src="images/sql-icon.svg" alt="SQL icon">
-                                <h3>SQL</h3>
-                            </span>
+                <section id="knowledgeSection" class="row row-cols-1 gap-5 w-100 mx-0 px-4 px-md-5">
+                    <div class="col text-center">
+                        <h2 class="font-red mb-4">Linguagens</h2>
+
+                        <div class="row row-cols-auto gap-3 justify-content-center">
+                            <div class="col" v-for="(language, i) in languages" :key="`language-${i}`">
+                                <img :src="language.iconUrl" :alt="`${language.name} icon`" height="64">
+                                
+                                <h3 class="mt-2">{{ language.name }}</h3>
+                            </div>
                         </div>
                     </div>
-                    <h2 class="blueText">Conhecimentos</h2>
-                    <div class="knowledgesGrid">
-                        <div class="row">
-                            <div class="col-sm mt-3 mt-sm-1">
-                                <span>
-                                    <img src="images/angular-icon.svg" alt="Angular icon">
-                                    <h3>Angular</h3>
-                                </span>
-                                <p>Conhecimento em desenvolvimento web utilizando Angular com Typescript.</p>
-                            </div>
-                            <div class="col-sm mt-3 mt-sm-1">
-                                <div class="list-inline">
-                                    <div class="list-inline-item me-3">
-                                        <span>
-                                            <img src="images/jquery-icon.svg" alt="JQuery icon">
-                                            <h3>JQuery</h3>
-                                        </span>
+
+                    <div class="col">
+                        <h2 class="font-blue text-center mb-4">Conhecimentos</h2>
+
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
+                            <div class="col p-3" v-for="(knowledge, i) in knowledges" :key="`knowledge-${i}`">
+                                <span class="row row-cols-auto gap-2">
+                                    <div class="col text-center" v-for="(heading, j) in knowledge.headings" :key="`heading-${i}_headings${j}`">
+                                        <img :src="heading.iconUrl" :alt="`${heading.name} icon`" height="64">
+
+                                        <h3 class="mt-2">{{ heading.name }}</h3>
                                     </div>
-                                    <div class="list-inline-item">
-                                        <span>
-                                            <img src="images/bootstrap-icon.svg" alt="Bootstrap icon">
-                                            <h3>Bootstrap</h3>
-                                        </span>
-                                    </div>
-                                </div>
-                                <p>Conhecimento em desenvolvimento de sistemas web utilizando JQuery e  Boostrap.</p>
-                            </div>
-                            <div class="col-sm mt-3 mt-sm-1">
-                                <span>
-                                    <img src="images/figma-icon.svg" alt="Figma icon">
-                                    <h3>Figma</h3>
                                 </span>
-                                <p>Conhecimento básico de design de interfaces utilizando Figma.</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm mt-3">
-                                <span>
-                                    <img src="images/android-icon.svg" alt="Android icon">
-                                    <h3>Android</h3>
-                                </span>
-                                <p>Conhecimento em desenvolvimento nativo para Android utilizando Android Studio e linguagem Java, através do curso de Android da plataforma Estudonauta.</p>
-                            </div>
-                            <div class="col-sm mt-3">
-                                <span>
-                                    <img src="images/react-icon.svg" alt="React icon">
-                                    <h3>React</h3>
-                                </span>
-                                <p>Conhecimento em desenvolvimento backend, web e mobile utilizando React e React Native com Typescript e TSX através da NLW3 apresentada pela Rocketseat.</p>
+
+                                <p>{{ knowledge.description }}</p>
                             </div>
                         </div>
                     </div>
@@ -243,7 +182,7 @@
                 <div class="section4BackgroundTop"></div>
                 <section id="section4">
                     <div class="section4Content">
-                        <h1 class="text-center">Felix Petiz Bonilho</h1>
+                        <h1 class="text-center text-gradient">Felix Petiz Bonilho</h1>
                         <div class="row row-cols-sm-2 row-cols-md-3 mt-2 contactInfoGrid">
                             <div class="col mt-5 mt-sm-0">
                                 <a href="https://github.com/Felix-xilef" target="_blank">

@@ -13,6 +13,7 @@
     --blue-foreground: #4B9EF3;
 
     --background-dark: #2b2b2b;
+    --background-dark-80: rgba(43, 43, 43, 0.8);
     --background-light: #E9E8E8;
 
     --gradient-blue: #4776E6;
@@ -47,7 +48,23 @@ body {
     text-align: justify;
 }
 
-.text-gradient, a {
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+.text-gradient {
     color: transparent;
     background: linear-gradient(90deg, var(--gradient-purple), var(--gradient-blue));
     -webkit-background-clip: text;
@@ -55,34 +72,30 @@ body {
     text-decoration: none;
 }
 
-a:hover {
+a.text-gradient:hover {
     color: transparent;
     background: linear-gradient(90deg, var(--gradient-dark-purple), var(--gradient-dark-blue));
     -webkit-background-clip: text;
     background-clip: text;
 }
 
-/* sections top & bottom backgrouns */
-.section4BackgroundTop {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
+.font-blue {
+    color: var(--blue-foreground);
+}
 
-    height: 50px;
+.font-red {
+    color: var(--red-foreground);
 }
 
 /* header */
 header {
-    background: rgba(43, 43, 43, 0.8);
-    width: 100%;
+    background: var(--background-dark-80);
 }
 
 header hr {
     background: linear-gradient(to right, var(--gradient-blue), var(--gradient-purple));
     height: 8px !important;
     opacity: 1;
-    margin: 0;
-    border: none;
 }
 
 /* Toggle button icon */
@@ -151,12 +164,6 @@ main section:first-child .image div img {
     background: var(--background-dark);
 }
 
-main section:first-child .intro h1 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: 45px;
-}
-
 main section:first-child .intro div svg:not(:hover) {
     fill: var(--foreground);
 }
@@ -166,7 +173,7 @@ main section:first-child .intro div svg:not(:hover) rect {
 }
 
 /* Education Section */
-main section:nth-child(2) {
+#educationSection {
     color: black;
     background-color: var(--background-light);
 
@@ -176,85 +183,16 @@ main section:nth-child(2) {
     padding-bottom: 3em;
 }
 
-main section:nth-child(2) h2 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: 35px;
-}
-
-main section:nth-child(2) h2.font-blue {
-    color: var(--blue-foreground);
-}
-
-main section:nth-child(2) h2.font-red {
-    color: var(--red-foreground);
-}
-
-main section:nth-child(2) h3 {
-    font-size: 22px;
-}
-
-main section:nth-child(2) p.subheading {
-    font-size: 17px;
-}
-
-main section:nth-child(2) p.status {
+#educationSection p.status {
     font-size: 12px;
 }
 
-/* section3 */
-#section3 {
-    max-width: 933px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Knowledge and Education Section */
+:is(#educationSection, #knowledgeSection) h3 {
+    font-size: 22px;
 }
 
-#section3 h2 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 35px;
-}
-
-#section3 h3 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 20px;
-}
-
-#section3 .iconsGrid {
-    max-width: 580px;
-
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#section3 .iconsGrid span {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#section3 .blueText {
-    margin-top: 40px;
-}
-
-#section3 .knowledgesGrid {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#section3 .knowledgesGrid span {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: fit-content;
-}
-
-#section3 .knowledgesGrid p {
+#educationSection p.subheading, #knowledgeSection p {
     font-size: 17px;
 }
 
@@ -282,17 +220,6 @@ main section:nth-child(2) p.status {
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-between;
-}
-
-#section4 .section4Content h1 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: 45px;
-    
-    color: transparent;
-    background: linear-gradient(90deg, var(--gradient-purple), var(--gradient-blue));
-    -webkit-background-clip: text;
-    background-clip: text;
 }
 
 #section4 .section4Content .contactInfoGrid {
@@ -340,18 +267,8 @@ footer a:hover {
     "desktop"
 */
 @media (min-width: 768px) {
-    /* Main Section */
-    main {
-        margin-top: 210px;
-    }
-
-    /* Education Section */
-    main section:nth-child(2) {
-        margin-top: 210px;
-    }
-
-    /* section3 */
-    #section3 {
+    /* Main Section, Education Section & Knowledge Section */
+    main, #educationSection, #knowledgeSection {
         margin-top: 210px;
     }
 
@@ -365,19 +282,14 @@ footer a:hover {
     "mobile"
 */
 @media (max-width: 767px) {
-    /* Main Section */
-    main {
+    /* Main Section & Knowledge Section */
+    main, #knowledgeSection {
         margin-top: 110px;
     }
 
     /* Education Section */
-    main section:nth-child(2) {
+    #educationSection {
         margin-top: 210px;
-    }
-
-    /* section3 */
-    #section3 {
-        margin-top: 110px;
     }
 
     /* section4 */
