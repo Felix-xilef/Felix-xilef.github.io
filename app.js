@@ -1,6 +1,38 @@
 const IMAGES_DIR = './images';
 
 const data = {
+  contacts: {
+    github: {
+      label: 'Felix-xilef',
+      url: 'https://github.com/Felix-xilef',
+      iconUrl: `${ IMAGES_DIR }/github-icon-black.svg`,
+    },
+    mail: {
+      label: 'felixpb@yahoo.com.br',
+      url: 'malito:felixpb@yahoo.com.br',
+      iconUrl: `${ IMAGES_DIR }/email-icon.svg`,
+    },
+    facebook: {
+      label: 'felix.petiz',
+      url: 'https://www.facebook.com/felix.petiz/',
+      iconUrl: `${ IMAGES_DIR }/facebook-icon.svg`,
+    },
+    phone: {
+      label: '+55 (11) 95331-1965',
+      url: 'tel:+5511953311965',
+      iconUrl: `${ IMAGES_DIR }/phone-icon.svg`,
+    },
+    linkedin: {
+      label: 'felix-xilef',
+      url: 'https://www.linkedin.com/in/felix-xilef/',
+      iconUrl: `${ IMAGES_DIR }/linkedin-icon.svg`,
+    },
+    instagram: {
+      label: 'petix_felix',
+      url: 'https://www.instagram.com/petix_felix/',
+      iconUrl: `${ IMAGES_DIR }/instagram-icon.svg`,
+    },
+  },
   education: [
     {
       type: "Ensino Superior",
@@ -163,6 +195,7 @@ const data = {
 const app = Vue.createApp({
   data() {
     return {
+      contacts: data.contacts,
       education: data.education,
       languages: data.languages,
       knowledges: data.knowledges,

@@ -79,6 +79,11 @@ a.text-gradient:hover {
     background-clip: text;
 }
 
+.background-light {
+    background-color: var(--background-light);
+    color: black;
+}
+
 .font-blue {
     color: var(--blue-foreground);
 }
@@ -154,6 +159,11 @@ header .navgationLinks a:hover {
     color: var(--foreground) !important;
 }
 
+/* Main */
+main {
+    margin-top: 30vh;
+}
+
 /* Introduction Section */
 main section:first-child .image div {
     z-index: -1;
@@ -174,13 +184,10 @@ main section:first-child .intro div svg:not(:hover) rect {
 
 /* Education Section */
 #educationSection {
-    color: black;
-    background-color: var(--background-light);
+    border-radius: 50% / 30px;
 
-    border-radius: 50% / 2em;
-
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #educationSection p.status {
@@ -196,60 +203,60 @@ main section:first-child .intro div svg:not(:hover) rect {
     font-size: 17px;
 }
 
-/* section4 */
-.section4BackgroundTop {
-    background-image: url(images/section4-background-shape-top.svg);
+/* Contact Section */
+#contactSection {
+    position: relative;
 }
 
-#section4 {
-    background-color: var(--background-light);
-    color: black;
+#contactSection::before, #contactSection::after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 50%;
+    height: 50px;
 
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    background: var(--background-dark);
 }
 
-#section4 .section4Content {
-    max-width: 933px;
-    min-height: 265px;
+#contactSection::before {
+    left: 0;
 
-    margin: auto;
-
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-between;
+    border-bottom-right-radius: 100% 70%;
+    border-bottom-left-radius: 50% 25%;
 }
 
-#section4 .section4Content .contactInfoGrid {
-    max-width: 814px;
+#contactSection::after {
+    right: 0;
+
+    border-bottom-left-radius: 100% 70%;
+    border-bottom-right-radius: 50% 25%;
 }
 
-#section4 .section4Content .contactInfoGrid a, #section4 .section4Content .contactInfoGrid span {
-    font-weight: 500;
+#contactSection h1:first-child {
+    margin-top: 50px;
+}
+
+#contactSection :is(a, span) {
     font-size: 20px;
-    text-decoration: none;
+    font-weight: 500;
     color: inherit;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#section4 .section4Content .contactInfoGrid a:hover {
-    color: rgba(0, 0, 0, 0.7);
+#contactSection a {
+    transition: all 0.2s;
 }
 
-#section4 .section4Content .contactInfoGrid img {
-    margin-right: 5px;
+#contactSection a:hover {
+    opacity: 0.7;
+}
+
+/* Main Section, Education Section, Knowledge Section & Contact Section */
+#educationSection, #knowledgeSection, #contactSection {
+    margin-top: 50vh;
 }
 
 /* footer */
 footer {
-    margin: 20px;
-
-    text-align: center;
     font-size: 15px;
 }
 
@@ -260,40 +267,5 @@ footer a {
 }
 
 footer a:hover {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* 
-    "desktop"
-*/
-@media (min-width: 768px) {
-    /* Main Section, Education Section & Knowledge Section */
-    main, #educationSection, #knowledgeSection {
-        margin-top: 210px;
-    }
-
-    /* section4 */
-    .section4BackgroundTop {
-        margin-top: 210px;
-    }
-}
-
-/* 
-    "mobile"
-*/
-@media (max-width: 767px) {
-    /* Main Section & Knowledge Section */
-    main, #knowledgeSection {
-        margin-top: 110px;
-    }
-
-    /* Education Section */
-    #educationSection {
-        margin-top: 210px;
-    }
-
-    /* section4 */
-    .section4BackgroundTop {
-        margin-top: 110px;
-    }
+    color: var(--dark-foreground);
 }
