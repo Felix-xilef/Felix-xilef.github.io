@@ -161,7 +161,7 @@ header .navgationLinks a:hover {
 
 /* Main */
 main {
-    margin-top: 30vh;
+    margin-top: 20vh;
 }
 
 /* Introduction Section */
@@ -206,6 +206,7 @@ main section:first-child .intro div svg:not(:hover) rect {
 /* Contact Section */
 #contactSection {
     position: relative;
+    z-index: -1;
 }
 
 #contactSection::before, #contactSection::after {
@@ -268,4 +269,13 @@ footer a {
 
 footer a:hover {
     color: var(--dark-foreground);
+}
+
+/*
+    desktop
+*/
+@media (min-width: 768px) {
+    main {
+        margin-top: 30vh;
+    }
 }
