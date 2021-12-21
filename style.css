@@ -1,6 +1,31 @@
+/* Google Fonts
+
+    Usage:
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Roboto', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --foreground: #f5f5f5;
+    --dark-foreground: #cccccc;
+    --red-foreground: #ED5058;
+    --blue-foreground: #4B9EF3;
+
+    --background-dark: #2b2b2b;
+    --background-dark-80: rgba(43, 43, 43, 0.8);
+    --background-light: #E9E8E8;
+
+    --gradient-blue: #4776E6;
+    --gradient-dark-blue: rgba(71, 119, 230, 0.6);
+    
+    --gradient-purple: #8E54E9;
+    --gradient-dark-purple: rgba(141, 84, 233, 0.6);
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -8,274 +33,230 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #2871FF, #3430FF, #9E22FF);
-    
-    border-radius: 5px;
+    background: linear-gradient(to top, var(--gradient-blue), var(--gradient-purple));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to top, rgb(15, 42, 95), rgb(20, 19, 105), rgb(78, 14, 128));
+    background: linear-gradient(to top, var(--gradient-dark-blue), var(--gradient-dark-purple));
 }
 
 /* body */
 body {
-    background: rgb(43, 43, 43);
-    color: #FFFFFF;
+    background: var(--background-dark);
+    color: var(--foreground);
     font-family: 'Roboto', sans-serif;
+    text-align: justify;
 }
 
-/* sections top & bottom backgrouns */
-.section2BackgroundTop, .section2BackgroundBottom, .section4BackgroundTop {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+}
 
-    height: 50px;
+h1, h2 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+.text-gradient {
+    color: transparent;
+    background: linear-gradient(90deg, var(--gradient-purple), var(--gradient-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-decoration: none;
+}
+
+a.text-gradient:hover {
+    color: transparent;
+    background: linear-gradient(90deg, var(--gradient-dark-purple), var(--gradient-dark-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.background-light {
+    background-color: var(--background-light);
+    color: black;
+}
+
+.font-blue {
+    color: var(--blue-foreground);
+}
+
+.font-red {
+    color: var(--red-foreground);
 }
 
 /* header */
 header {
-    background: rgba(43, 43, 43, 0.8);
-    width: 100%;
+    background: var(--background-dark-80);
 }
 
-header .decorationShape {
-    background: linear-gradient(90deg, #2871FF 0%, #3430FF 48.7%, #9E22FF 100%);
-    width: 100%;
-    height: 10px;
+header hr {
+    background: linear-gradient(to right, var(--gradient-blue), var(--gradient-purple));
+    height: 8px !important;
+    opacity: 1;
 }
 
-header .navgationLinks {
-    margin-left: auto;
-    margin-right: 0!important;
+/* Toggle button icon */
+header .navbar-toggler {
+    transition: all 0.2s;
+    border-color: var(--dark-foreground);
 }
 
+header .navbar-toggler:hover {
+    background: rgba(133, 133, 133, 0.2);
+}
+
+header .navbar-toggler:focus {
+    box-shadow: none;
+    border-color: var(--foreground);
+}
+
+header .navbar-toggler .toggle-icon {
+    aspect-ratio: 8/7;
+}
+
+header .navbar-toggler .toggle-icon span {
+    display: block;
+    height: 4px;
+    width: 30px;
+    transition: all 0.2s;
+    background-color: var(--dark-foreground);
+    border-radius: 2px;
+}
+
+header .navbar-toggler:focus .toggle-icon span {
+    background-color: var(--foreground);
+}
+
+header .navbar-toggler:not(.collapsed) .toggle-icon span:first-child {
+    transform: rotate(41.18deg) scaleX(1.32);
+    transform-origin: 6% 10%;
+}
+
+header .navbar-toggler:not(.collapsed) .toggle-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+header .navbar-toggler:not(.collapsed) .toggle-icon span:last-child {
+    transform: rotate(-41.18deg) scaleX(1.32);
+    transform-origin: 10% 90%;
+}
+
+/* Navigation links */
 header .navgationLinks a {
     font-size: 20px;
+    color: var(--dark-foreground) !important;
 }
 
-/* section1 */
-#section1 {
-    max-width: 933px;
-
-    margin-left: auto;
-    margin-right: auto;
+header .navgationLinks a:hover {
+    color: var(--foreground) !important;
 }
 
-#section1 .row {
-    margin: 0 20px;
-}
-#section1 .intro h1 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: 45px;
-    
-    color: transparent;
-    background: linear-gradient(90deg, #9E22FF 0%, #3430FF 48.7%, #2871FF 100%);
-    -webkit-background-clip: text;
+/* Main */
+main {
+    margin-top: 30vh;
 }
 
-#section1 .intro .iconsDiv {
-    height: 35px;
-    width: 200px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Introduction Section */
+main section:first-child .image div {
+    z-index: -1;
+    background: linear-gradient(135deg, var(--gradient-blue), var(--gradient-purple));
 }
 
-#section1 .intro .iconsDiv a img:hover {
-    width: 35px;
-    height: 35px;
+main section:first-child .image div img {
+    background: var(--background-dark);
 }
 
-#section1 .image {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+main section:first-child .intro div svg:not(:hover) {
+    fill: var(--foreground);
 }
 
-/* red & blue text */
-.redText {
-    color: #ED5058;
+main section:first-child .intro div svg:not(:hover) rect {
+    fill: none;
 }
 
-.blueText {
-    color: #4B9EF3;
+/* Education Section */
+#educationSection {
+    border-radius: 50% / 30px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-/* section2 */
-.section2BackgroundTop {
-    background-image: url(images/section2-background-shape-top.svg);
-}
-
-.section2BackgroundBottom {
-    background-image: url(images/section2-background-shape-bottom.svg);
-}
-
-#section2 {
-    background-color: #E9E8E8;
-    color: black;
-
-    padding: 0 20px;
-}
-
-#section2 .section2Content {
-    max-width: 933px;
-
-    margin: auto;
-}
-
-#section2 .section2Content h2 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: 35px;
-
-    margin-bottom: 4px;
-}
-
-#section2 .section2Content h3 {
-    font-size: 22px;
-
-    margin: 0;
-}
-
-#section2 .section2Content .institution {
-    font-size: 17px;
-
-    margin-bottom: 2px;
-}
-
-#section2 .section2Content .status {
+#educationSection p.status {
     font-size: 12px;
 }
 
-#section2 .section2Content #statusCurso {
-    max-width: 159px;
-    margin-left: auto;
-    text-align: start;
+/* Knowledge and Education Section */
+:is(#educationSection, #knowledgeSection) h3 {
+    font-size: 22px;
 }
 
-/* section3 */
-#section3 {
-    max-width: 933px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#section3 h2 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 35px;
-}
-
-#section3 h3 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 20px;
-}
-
-#section3 .iconsGrid {
-    max-width: 580px;
-
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#section3 .iconsGrid span {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#section3 .blueText {
-    margin-top: 40px;
-}
-
-#section3 .knowledgesGrid {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#section3 .knowledgesGrid span {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: fit-content;
-}
-
-#section3 .knowledgesGrid p {
+#educationSection p.subheading, #knowledgeSection p {
     font-size: 17px;
 }
 
-/* section4 */
-.section4BackgroundTop {
-    background-image: url(images/section4-background-shape-top.svg);
+/* Contact Section */
+#contactSection {
+    position: relative;
 }
 
-#section4 {
-    background-color: #E9E8E8;
-    color: black;
+#contactSection::before, #contactSection::after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 50%;
+    height: 50px;
 
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    background: var(--background-dark);
 }
 
-#section4 .section4Content {
-    max-width: 933px;
-    min-height: 265px;
+#contactSection::before {
+    left: 0;
 
-    margin: auto;
-
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-between;
+    border-bottom-right-radius: 100% 70%;
+    border-bottom-left-radius: 50% 25%;
 }
 
-#section4 .section4Content h1 {
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: 45px;
-    
-    color: transparent;
-    background: linear-gradient(90deg, #9E22FF 0%, #3430FF 48.7%, #2871FF 100%);
-    -webkit-background-clip: text;
+#contactSection::after {
+    right: 0;
+
+    border-bottom-left-radius: 100% 70%;
+    border-bottom-right-radius: 50% 25%;
 }
 
-#section4 .section4Content .contactInfoGrid {
-    max-width: 814px;
+#contactSection h1:first-child {
+    margin-top: 50px;
 }
 
-#section4 .section4Content .contactInfoGrid a, #section4 .section4Content .contactInfoGrid span {
-    font-weight: 500;
+#contactSection :is(a, span) {
     font-size: 20px;
-    text-decoration: none;
+    font-weight: 500;
     color: inherit;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#section4 .section4Content .contactInfoGrid a:hover {
-    color: rgba(0, 0, 0, 0.7);
+#contactSection a {
+    transition: all 0.2s;
 }
 
-#section4 .section4Content .contactInfoGrid img {
-    margin-right: 5px;
+#contactSection a:hover {
+    opacity: 0.7;
+}
+
+/* Main Section, Education Section, Knowledge Section & Contact Section */
+#educationSection, #knowledgeSection, #contactSection {
+    margin-top: 50vh;
 }
 
 /* footer */
 footer {
-    margin: 20px;
-
-    text-align: center;
     font-size: 15px;
 }
 
@@ -286,59 +267,5 @@ footer a {
 }
 
 footer a:hover {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* 
-    "desktop"
-*/
-@media (min-width: 576px), (orientation: landscape) {
-    /* section1 */
-    #section1 {
-        margin-top: 210px;
-    }
-
-    /* section2 */
-    .section2BackgroundTop {
-        margin-top: 210px;
-    }
-
-    /* section3 */
-    #section3 {
-        margin-top: 210px;
-    }
-
-    /* section4 */
-    .section4BackgroundTop {
-        margin-top: 210px;
-    }
-}
-
-/* 
-    "mobile"
-*/
-@media (max-width: 575px) and (orientation: portrait) {
-    /* section1 */
-    #section1 {
-        margin-top: 110px;
-    }
-    
-    #section1 .intro {
-        margin-top: 30px;
-    }
-
-    /* section2 */
-    .section2BackgroundTop {
-        margin-top: 110px;
-    }
-
-    /* section3 */
-    #section3 {
-        margin-top: 110px;
-    }
-
-    /* section4 */
-    .section4BackgroundTop {
-        margin-top: 110px;
-    }
+    color: var(--dark-foreground);
 }
