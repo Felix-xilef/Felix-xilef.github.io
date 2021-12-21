@@ -89,33 +89,55 @@ const data = {
     {
       headings: [
         {
+          name: "Vue.js",
+          iconUrl: 'https://v3.vuejs.org/logo.png',
+        },
+        {
           name: "Angular",
-          iconUrl: `${ IMAGES_DIR }/angular-icon.svg`,
+          iconUrl: 'https://angular.io/assets/images/logos/angular/shield-large.svg',
         },
       ],
-      description: 'Conhecimento em desenvolvimento web utilizando Angular com Typescript',
+      description: 'Conhecimento em desenvolvimento de sistemas web (frontend) utilizando Angular com TypeScript e Vue 2 e 3 com JavaScript',
     },
     {
       headings: [
-        {
-          name: "JQuery",
-          iconUrl: `${ IMAGES_DIR }/jquery-icon.svg`,
-        },
         {
           name: "Bootstrap",
           iconUrl: `${ IMAGES_DIR }/bootstrap-icon.svg`,
         },
       ],
-      description: 'Conhecimento em desenvolvimento de sistemas web utilizando JQuery e  Boostrap',
+      description: 'Conhecimento na utilização do Boostrap no desenvolvimento de sistemas web',
     },
     {
       headings: [
         {
           name: "Figma",
-          iconUrl: `${ IMAGES_DIR }/figma-icon.svg`,
+          iconUrl: 'https://static.figma.com/app/icon/1/favicon.svg',
         },
       ],
       description: 'Conhecimento básico de design de interfaces utilizando Figma',
+    },
+    {
+      headings: [
+        {
+          name: "Node.js",
+          iconUrl: 'https://nodejs.org/static/images/favicons/apple-touch-icon.png',
+        },
+        {
+          name: "NestJS",
+          iconUrl: 'https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg',
+        },
+      ],
+      description: "Conhecimento em desenvolvimento de APIs REST utilizando Node com TypeScript e NestJS (Framework baseado no Express)",
+    },
+    {
+      headings: [
+        {
+          name: "TypeORM",
+          iconUrl: `${ IMAGES_DIR }/typeorm-icon.png`,
+        },
+      ],
+      description: "Conhecimento na utilização do TypeORM para o desenvolvimento de APIs com Node e TypeScript",
     },
     {
       headings: [
@@ -124,16 +146,16 @@ const data = {
           iconUrl: `${ IMAGES_DIR }/android-icon.svg`,
         },
       ],
-      description: 'Conhecimento em desenvolvimento nativo para Android utilizando Android Studio e linguagem Java, através do curso de Android da plataforma Estudonauta',
+      description: 'Conhecimento em desenvolvimento nativo para Android utilizando Android Studio e linguagem Java',
     },
     {
       headings: [
         {
-          name: "React",
-          iconUrl: `${ IMAGES_DIR }/react-icon.svg`,
+          name: "Flutter",
+          iconUrl: 'https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png',
         },
       ],
-      description: 'Conhecimento em desenvolvimento backend, web e mobile utilizando React e React Native com Typescript e TSX através da NLW3 apresentada pela Rocketseat',
+      description: 'Conhecimento básico em desenvolvimento de sistemas web e mobile utilizando Flutter',
     },
   ],
 };
