@@ -10,7 +10,7 @@ export default {
     },
     mail: {
       label: 'felixpb@yahoo.com.br',
-      url: 'malito:felixpb@yahoo.com.br',
+      url: 'mailto:felixpb@yahoo.com.br',
       iconUrl: `${IMAGES_DIR}/email-icon.svg`,
     },
     facebook: {
