@@ -1,5 +1,10 @@
 import data from './assets/data.js';
 
+const lastStyleSheetIndex = document.styleSheets.length - 1;
+const lastCssRuleIndex = document.styleSheets[lastStyleSheetIndex].cssRules.length;
+
+const addStyle = (stringfiedCss = '') => document.styleSheets[lastStyleSheetIndex].insertRule(stringfiedCss, lastCssRuleIndex);
+
 const app = Vue.createApp({
   data() {
     return {
@@ -24,9 +29,23 @@ const app = Vue.createApp({
         count++;
       });
     },
+    adaptScrollBar() {
+      if (document.documentElement.scrollTop == 0) {
+        addStyle('::-webkit-scrollbar-thumb { border-top-left-radius: 0; border-top-right-radius: 0; }');
+
+      } else if (document.documentElement.scrollTop == document.documentElement.scrollHeight - document.documentElement.clientHeight) {
+        addStyle('::-webkit-scrollbar-thumb { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }');
+
+      } else if (document.styleSheets[lastStyleSheetIndex].cssRules[lastCssRuleIndex]) {
+        document.styleSheets[lastStyleSheetIndex].deleteRule(lastCssRuleIndex);
+      }
+    },
   },
   mounted() {
     this.setEducationColor(this.education);
+
+    this.adaptScrollBar();
+    window.onscroll = this.adaptScrollBar;
   },
 });
 

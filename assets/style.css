@@ -29,15 +29,17 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(80, 80, 80);
-}
-
-::-webkit-scrollbar-thumb {
     background: linear-gradient(to top, var(--gradient-blue), var(--gradient-purple));
 }
 
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    box-shadow: 0 0 0 100vh rgb(80, 80, 80);
+    border-radius: 5px;
+}
+
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to top, var(--gradient-dark-blue), var(--gradient-dark-purple));
+    background: rgba(80, 80, 80, 0.4);
 }
 
 /* body */
