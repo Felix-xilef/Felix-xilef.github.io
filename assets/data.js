@@ -6,32 +6,32 @@ export default {
     github: {
       label: 'Felix-xilef',
       url: 'https://github.com/Felix-xilef',
-      iconUrl: `${IMAGES_DIR}/github-icon-black.svg`,
+      iconClass: 'bi-github',
     },
     mail: {
       label: 'felixpb@yahoo.com.br',
       url: 'mailto:felixpb@yahoo.com.br',
-      iconUrl: `${IMAGES_DIR}/email-icon.svg`,
+      iconClass: 'bi-envelope-fill',
     },
     facebook: {
       label: 'felix.petiz',
       url: 'https://www.facebook.com/felix.petiz/',
-      iconUrl: `${IMAGES_DIR}/facebook-icon.svg`,
+      iconClass: 'bi-facebook bi-is-gradient bi-has-background',
     },
     phone: {
       label: '+55 (11) 95331-1965',
       url: 'tel:+5511953311965',
-      iconUrl: `${IMAGES_DIR}/phone-icon.svg`,
+      iconClass: 'bi-telephone-fill',
     },
     linkedin: {
       label: 'felix-xilef',
       url: 'https://www.linkedin.com/in/felix-xilef/',
-      iconUrl: `${IMAGES_DIR}/linkedin-icon.svg`,
+      iconClass: 'bi-linkedin bi-has-background',
     },
     instagram: {
       label: 'petix_felix',
       url: 'https://www.instagram.com/petix_felix/',
-      iconUrl: `${IMAGES_DIR}/instagram-icon.svg`,
+      iconClass: 'bi-instagram bi-is-gradient',
     },
   },
   education: [

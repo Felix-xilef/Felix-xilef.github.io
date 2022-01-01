@@ -94,6 +94,64 @@ a.text-gradient:hover {
     color: var(--red-foreground);
 }
 
+i {
+    position: relative;
+}
+
+i, i::before, i::after {
+    transition: all 0.2s;
+}
+
+i.bi-github::before {
+    color: black;
+}
+
+i.bi-linkedin::before {
+    color: #0077B7;
+}
+
+i.bi-telephone-fill::before {
+    color: #6AAF50;
+}
+
+i.bi-envelope-fill::before {
+    color: #EE2727;
+}
+
+i.bi-instagram::before {
+    background: linear-gradient(to top, #E09B3D, #C74C4D 30%, #C21975 60%, #7024C4);
+}
+
+i.bi-facebook::before {
+    background: linear-gradient(to top, #0062E0, #19AFFF);
+}
+
+i.bi-is-gradient::before {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+i.bi-has-background::after {
+    content: "";
+
+    background-color: white;
+
+    height: 0.9em;
+    width: 0.9em;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    z-index: -1;
+}
+
+i.bi-has-background:is(.bi-linkedin)::after {
+    border-radius: 25%;
+}
+
 /* header */
 header {
     background: var(--background-dark-80);
@@ -176,12 +234,16 @@ main section:first-child .image div img {
     background: var(--background-dark);
 }
 
-main section:first-child .intro div svg:not(:hover) {
-    fill: var(--foreground);
+main section:first-child .intro div i {
+    font-size: 32px;
 }
 
-main section:first-child .intro div svg:not(:hover) rect {
-    fill: none;
+main section:first-child .intro div i:not(:hover)::before {
+    color: var(--foreground);
+}
+
+main section:first-child .intro div i:not(:hover)::after {
+    background-color: transparent;
 }
 
 /* Education Section */
@@ -238,18 +300,19 @@ main section:first-child .intro div svg:not(:hover) rect {
     margin-top: 50px;
 }
 
-#contactSection :is(a, span) {
+#contactSection a {
+    transition: all 0.2s;
     font-size: 20px;
     font-weight: 500;
     color: inherit;
 }
 
-#contactSection a {
-    transition: all 0.2s;
-}
-
 #contactSection a:hover {
     opacity: 0.7;
+}
+
+#contactSection a i {
+    font-size: 32px;
 }
 
 /* Main Section, Education Section, Knowledge Section & Contact Section */
