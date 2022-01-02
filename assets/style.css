@@ -86,14 +86,6 @@ a.text-gradient:hover {
     color: black;
 }
 
-.font-blue {
-    color: var(--blue-foreground);
-}
-
-.font-red {
-    color: var(--red-foreground);
-}
-
 i {
     position: relative;
 }
@@ -254,6 +246,10 @@ main section:first-child .intro div i:not(:hover)::after {
     padding-bottom: 30px;
 }
 
+#educationSection h2 {
+    color: var(--blue-foreground);
+}
+
 #educationSection p.status {
     font-size: 12px;
 }
@@ -265,6 +261,68 @@ main section:first-child .intro div i:not(:hover)::after {
 
 #educationSection p.subheading, #knowledgeSection p {
     font-size: 17px;
+}
+
+/* Knowledge Section */
+#knowledgeSection h2 {
+    color: var(--blue-foreground);
+}
+
+#knowledgeSection div.col:nth-of-type(odd) h2 {
+    color: var(--red-foreground);
+}
+
+/* Experience Section */
+#experienceSection {
+    position: relative;
+
+    border-bottom-left-radius: 50% 30px;
+    border-bottom-right-radius: 50% 30px;
+
+    padding-bottom: 30px;
+    padding-top: 60px;
+}
+
+#experienceSection::before, #experienceSection::after {
+    position: absolute;
+    top: 0;
+}
+
+#experienceSection::before {
+    content: '';
+    width: 100%;
+    left: 0;
+    height: 60px;
+
+    background: var(--background-dark);
+
+    border-bottom-left-radius: 50% 30px;
+    border-bottom-right-radius: 50% 30px;
+}
+
+#experienceSection::after {
+    content: 'Experiências';
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: transparent;
+    background: linear-gradient(90deg, var(--gradient-purple), var(--gradient-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-decoration: none;
+}
+
+#experienceSection h3 {
+    color: var(--red-foreground);
+}
+
+#experienceSection p:first-of-type {
+    font-weight: 500;
 }
 
 /* Contact Section */
@@ -316,7 +374,7 @@ main section:first-child .intro div i:not(:hover)::after {
 }
 
 /* Main Section, Education Section, Knowledge Section & Contact Section */
-#educationSection, #knowledgeSection, #contactSection {
+#educationSection, #knowledgeSection, #experienceSection, #contactSection {
     margin-top: 50vh;
 }
 
@@ -335,11 +393,32 @@ footer a:hover {
     color: var(--dark-foreground);
 }
 
+/* 
+    mobile
+*/
+@media (max-width: 768px) {
+    #educationSection div.col:nth-of-type(even) h2 {
+        color: var(--red-foreground);
+    }
+
+    #experienceSection div.col:nth-of-type(even) h3 {
+        color: var(--blue-foreground);
+    }
+}
+
 /*
     desktop
 */
 @media (min-width: 768px) {
     main {
         margin-top: 30vh;
+    }
+
+    #educationSection div.col:is(:nth-of-type(4n+2), :nth-of-type(4n+3)) h2 {
+        color: var(--red-foreground);
+    }
+
+    #experienceSection div.col:is(:nth-of-type(4n+2), :nth-of-type(4n+3)) h3 {
+        color: var(--blue-foreground);
     }
 }

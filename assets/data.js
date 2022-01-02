@@ -190,5 +190,34 @@ export default {
       ],
       description: 'Conhecimento básico em desenvolvimento de sistemas web e mobile utilizando Flutter',
     },
+    {
+      headings: [
+        {
+          name: "JSF",
+          iconUrl: 'https://pbs.twimg.com/profile_images/1352023473/jsf-logo-no-text_400x400.png',
+        },
+        {
+          name: "Play",
+          iconUrl: 'https://www.playframework.com/assets/images/logos/2512c6416003429c3e7d3e9d389e52bd-play_icon_full_color.svg',
+        },
+      ],
+      description: 'Conhecimento básico em desenvolvimento java utilizando JavaServer Faces e Play Framework através de manutenções relazidas em sistemas legado',
+    },
+  ],
+  experiences: [
+    {
+      role: 'Estagiário em desenvolvimento de sistemas',
+      enterprise: 'Smart Staff',
+      beginDate: '05/2021',
+      endDate: 'hoje',
+      description: 'Sou estagiário na equipe de desenvolvimento da empresa Smart Staff. Atuo criando novos sistemas e dando manutenção, assim como criando novas funcionalidades para os já existentes. Incluindo sistemas em Angular, Vue, NestJS e legados em Java, utilizando JSF e Play Framework',
+    },
+    {
+      role: 'Estagiário em atendimento ao cliente',
+      enterprise: 'Sabesp',
+      beginDate: '06/2017',
+      endDate: '06/2018',
+      description: 'Durante o 2°/3° ano do ensino médio estagiei na agência da Sabesp de São Mateus. Atuando principalmente na área de atendimento ao cliente, mas também na parte de organização interna',
+    },
   ],
 };

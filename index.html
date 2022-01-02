@@ -57,6 +57,10 @@
                                 </li>
                                 
                                 <li  class="nav-item">
+                                    <a class="nav-link" href="#experienceSection">Experiências</a>
+                                </li>
+                                
+                                <li  class="nav-item">
                                     <a class="nav-link" href="#contactSection">Contato</a>
                                 </li>
                             </ul>
@@ -107,7 +111,7 @@
         
                 <section id="educationSection" class="row row-cols-1 row-cols-md-2 w-100 mx-0 px-4 background-light">
                     <div v-for="(eduItem, i) in education" :key="`education-${i}`" class="col p-2 px-md-4">
-                        <h2 class="mb-0" :class="eduItem.color">{{ eduItem.type }}</h2>
+                        <h2 class="mb-0">{{ eduItem.type }}</h2>
 
                         <div v-for="(subItem, j) in eduItem.content" :key="`education-${i}_item-${j}`" class="mt-2">
                             <h3 class="m-0">{{ subItem.heading }}</h3>
@@ -128,7 +132,7 @@
         
                 <section id="knowledgeSection" class="row row-cols-1 gap-5 w-100 mx-0 px-4 px-md-5">
                     <div class="col text-center">
-                        <h2 class="font-red mb-4">Linguagens</h2>
+                        <h2 class="mb-4">Linguagens</h2>
 
                         <div class="row row-cols-auto gap-3 justify-content-around">
                             <div class="col" v-for="(language, i) in languages" :key="`language-${i}`">
@@ -140,7 +144,7 @@
                     </div>
 
                     <div class="col">
-                        <h2 class="font-blue text-center mb-4">Conhecimentos</h2>
+                        <h2 class="text-center mb-4">Conhecimentos</h2>
 
                         <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-around">
                             <div class="col p-3" v-for="(knowledge, i) in knowledges" :key="`knowledge-${i}`">
@@ -154,6 +158,26 @@
 
                                 <p>{{ knowledge.description }}</p>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experienceSection" class="w-100 mx-0 px-4 background-light">
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col p-2 p-md-4" v-for="(experience, i) in experiences" :key="`experience-${i}`">
+                            <h3 class="fw-bold">{{ experience.role }}</h3>
+                            
+                            <h4 class="fw-bold">
+                                <i class="bi bi-building"></i>
+                                {{ experience.enterprise }}
+                            </h4>
+
+                            <p>
+                                <i class="bi bi-calendar-range"></i>
+                                {{ experience.beginDate }} - {{ experience.endDate }}
+                            </p>
+
+                            <p class="m-0">{{ experience.description }}</p>
                         </div>
                     </div>
                 </section>
@@ -173,7 +197,7 @@
             </main>
             
             <footer class="text-center p-3 m-0">
-                Icons made by
+                Some icons made by
                 <a href="https://www.flaticon.com/authors/pixel-perfect" target="_blank" title="Pixel perfect">Pixel perfect</a>
                 and
                 <a href="https://www.freepik.com" target="_blank" title="Freepik">Freepik</a>

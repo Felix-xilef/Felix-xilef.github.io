@@ -13,22 +13,10 @@ const app = Vue.createApp({
       education: data.education,
       languages: data.languages,
       knowledges: data.knowledges,
+      experiences: data.experiences,
     }
   },
   methods: {
-    setEducationColor(educationArray=[]) {
-      let blue = true, count = 1;
-
-      educationArray.forEach(item => {
-        if (count >= 2) {
-          count = 0;
-          blue = !blue;
-        }
-
-        item.color = blue ? 'font-blue' : 'font-red';
-        count++;
-      });
-    },
     adaptScrollBar() {
       if (document.documentElement.scrollTop == 0) {
         addStyle('::-webkit-scrollbar-thumb { border-top-left-radius: 0; border-top-right-radius: 0; }');
@@ -42,8 +30,6 @@ const app = Vue.createApp({
     },
   },
   mounted() {
-    this.setEducationColor(this.education);
-
     this.adaptScrollBar();
     window.onscroll = this.adaptScrollBar;
   },
