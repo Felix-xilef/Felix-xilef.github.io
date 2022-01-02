@@ -14,6 +14,7 @@ const app = Vue.createApp({
       languages: data.languages,
       knowledges: data.knowledges,
       experiences: data.experiences,
+      projects: data.projects,
     }
   },
   methods: {

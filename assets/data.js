@@ -220,4 +220,12 @@ export default {
       description: 'Durante o 2°/3° ano do ensino médio estagiei na agência da Sabesp de São Mateus. Atuando principalmente na área de atendimento ao cliente, mas também na parte de organização interna',
     },
   ],
+  projects: [
+    'saver-books',
+    'HavingOrder',
+    'Curso-de-Python',
+    'Estrutura-de-Dados',
+    'Programacao-em-Scripts',
+    'next-level-week-5-Flutter',
+  ],
 };

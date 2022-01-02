@@ -218,23 +218,23 @@ main {
 }
 
 /* Introduction Section */
-main section:first-child .image div {
+main section:first-of-type .image div {
     background: linear-gradient(135deg, var(--gradient-blue), var(--gradient-purple));
 }
 
-main section:first-child .image div img {
+main section:first-of-type .image div img {
     background: var(--background-dark);
 }
 
-main section:first-child .intro div i {
+main section:first-of-type .intro div i {
     font-size: 32px;
 }
 
-main section:first-child .intro div i:not(:hover)::before {
+main section:first-of-type .intro div i:not(:hover)::before {
     color: var(--foreground);
 }
 
-main section:first-child .intro div i:not(:hover)::after {
+main section:first-of-type .intro div i:not(:hover)::after {
     background-color: transparent;
 }
 
@@ -276,45 +276,43 @@ main section:first-child .intro div i:not(:hover)::after {
 #experienceSection {
     position: relative;
 
-    border-bottom-left-radius: 50% 30px;
-    border-bottom-right-radius: 50% 30px;
-
-    padding-bottom: 30px;
     padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#experienceSection::before, #experienceSection::after, #experienceSection h2 {
+    position: absolute;
 }
 
 #experienceSection::before, #experienceSection::after {
-    position: absolute;
-    top: 0;
-}
-
-#experienceSection::before {
     content: '';
     width: 100%;
     left: 0;
     height: 60px;
 
     background: var(--background-dark);
+}
+
+#experienceSection::before {
+    top: 0;
 
     border-bottom-left-radius: 50% 30px;
     border-bottom-right-radius: 50% 30px;
 }
 
 #experienceSection::after {
-    content: 'Experiências';
+    bottom: 0;
+
+    border-top-left-radius: 50% 30px;
+    border-top-right-radius: 50% 30px;
+}
+
+#experienceSection h2 {
+    top: 0;
     text-align: center;
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: 35px;
 
     left: 50%;
     transform: translateX(-50%);
-
-    color: transparent;
-    background: linear-gradient(90deg, var(--gradient-purple), var(--gradient-blue));
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-decoration: none;
 }
 
 #experienceSection h3 {
@@ -323,6 +321,19 @@ main section:first-child .intro div i:not(:hover)::after {
 
 #experienceSection p:first-of-type {
     font-weight: 500;
+}
+
+/* Project Section */
+#projectSection {
+    color: var(--blue-foreground);
+}
+
+#projectSection a {
+    transition: all .2s;
+}
+
+#projectSection a:hover {
+    opacity: 0.75;
 }
 
 /* Contact Section */
@@ -374,7 +385,7 @@ main section:first-child .intro div i:not(:hover)::after {
 }
 
 /* Main Section, Education Section, Knowledge Section & Contact Section */
-#educationSection, #knowledgeSection, #experienceSection, #contactSection {
+#educationSection, #knowledgeSection, #experienceSection, #projectSection, #contactSection {
     margin-top: 50vh;
 }
 
