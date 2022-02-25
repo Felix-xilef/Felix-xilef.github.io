@@ -1,7 +1,7 @@
 const IMAGES_DIR = './assets/images';
 
 export default {
-  profilePictureUrl: 'https://media-exp1.licdn.com/dms/image/C4E03AQHlgvpPFiwuLQ/profile-displayphoto-shrink_200_200/0/1610224704587?e=1645660800&v=beta&t=MiF_cbD_ynUOGRyzelg_MKc7MKxushdliN2pILehc1U',
+  profilePictureUrl: `${IMAGES_DIR}/profile.jpg`,
   contacts: {
     github: {
       label: 'Felix-xilef',
