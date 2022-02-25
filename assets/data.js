@@ -1,7 +1,7 @@
 const IMAGES_DIR = './assets/images';
 
 export default {
-  profilePictureUrl: `${IMAGES_DIR}/profile.jpg`,
+  profilePictureUrl: `${IMAGES_DIR}/profile-picture.jpg`,
   contacts: {
     github: {
       label: 'Felix-xilef',
