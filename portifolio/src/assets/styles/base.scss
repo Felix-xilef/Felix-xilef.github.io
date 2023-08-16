@@ -1,0 +1,10 @@
+$global-variables: (
+  "gradient-blue": #4776E6,
+  "gradient-purple": #8E54E9,
+);
+
+:root {
+  @each $name, $value in $global-variables {
+    --#{$name}: #{$value};
+  }
+}
