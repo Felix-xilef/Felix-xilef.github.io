@@ -3,6 +3,8 @@ export interface AppMessages {
     presentation: {
       title: string;
       description: string;
+
+      profilePictureAlt: string;
     };
   };
 }

@@ -5,6 +5,8 @@ export default new AppMessages({
     presentation: {
       title: 'Olá, eu sou Felix!',
       description: 'Prazer, sou formado em Análise e Desenvolvimento de Sistemas pela Fatec São Caetano do Sul e atualmente atuo como desenvolvedor FullStack.',
+
+      profilePictureAlt: 'Foto de perfil',
     },
   },
 });
