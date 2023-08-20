@@ -8,5 +8,51 @@ export default new AppMessages({
 
       profilePictureAlt: 'Foto de perfil',
     },
+
+    education: {
+      college: {
+        title: 'Ensino Superior',
+        course: 'Análise e Desenvolvimento de Sistemas',
+        graduation: 'Graduado em Dez. de 2021',
+      },
+
+      coursesAndCertifications: {
+        title: 'Cursos e Certificações',
+        items: {
+          linuxEssentials: {
+            name: 'Curso Linux Essentials',
+            institution: 'CISCO',
+            conclusion: 'Concluído em Dez. de 2020',
+          },
+          ctfl: {
+            name: 'Certificação em Teste de Software CTFL',
+            institution: 'ISTQB',
+            conclusion: 'Emitido em Maio de 2019',
+          },
+        },
+      },
+
+      languages: {
+        title: 'Idiomas',
+        items: {
+          portuguese: {
+            name: 'Português',
+            level: 'Nativo',
+          },
+          english: {
+            name: 'Inglês',
+            level: 'Avançado',
+          },
+          spanish: {
+            name: 'Espanhol',
+            level: 'Avançado',
+          },
+          japanese: {
+            name: 'Japonês',
+            level: 'Básico',
+          },
+        },
+      },
+    },
   },
 });

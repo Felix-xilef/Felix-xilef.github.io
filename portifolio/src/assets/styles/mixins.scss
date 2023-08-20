@@ -1,0 +1,15 @@
+@mixin text-gradient($gradient: linear-gradient(to right, var(--gradient-purple), var(--gradient-blue))) {
+  color: transparent;
+  background: $gradient;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@mixin font-family-nunito {
+  font-family: Nunito, sans-serif;
+}
+
+@mixin font-family-roboto {
+  font-family: Roboto, sans-serif;
+}

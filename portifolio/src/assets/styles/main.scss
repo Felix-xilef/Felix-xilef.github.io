@@ -1,8 +1,11 @@
+@use './mixins.scss';
+
 @import './base.scss';
 
 * {
-  font-family: Roboto, sans-serif;
   text-align: justify;
+
+  @include mixins.font-family-roboto;
 }
 
 h1,
@@ -11,5 +14,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Nunito, sans-serif;
+  @include mixins.font-family-nunito;
+
+  * {
+    @include mixins.font-family-nunito;
+  }
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to top, var(--gradient-blue), var(--gradient-purple));
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  box-shadow: 0 0 0 100vh rgb(80, 80, 80);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(80, 80, 80, 0.4);
 }
