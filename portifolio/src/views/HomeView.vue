@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Education from '@/components/home/Education.vue';
 import Presentation from '@/components/home/Presentation.vue';
+import ProfessionalExperience from '@/components/home/ProfessionalExperience.vue';
 </script>
 
 <template>
@@ -10,6 +11,10 @@ import Presentation from '@/components/home/Presentation.vue';
 
   <section id="education">
     <Education />
+  </section>
+
+  <section id="professional-experience">
+    <ProfessionalExperience />
   </section>
 </template>
 

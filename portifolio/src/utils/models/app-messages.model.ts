@@ -1,3 +1,33 @@
+type ProfessionalExperienceItem<T extends ChangeOfPosition<any>[] | undefined = undefined> = {
+  title: string;
+  enterprise: string;
+  startDate: string;
+  endDate?: string;
+  description: string;
+} & (
+  T extends ChangeOfPosition<any>[] ?
+    {
+      changesOfPosition: T;
+    } :
+  {
+    changesOfPosition?: T;
+  }
+);
+
+type ChangeOfPosition<EndDateType extends string | undefined = undefined> = {
+  positionName: string;
+  startDate: string;
+  description: string;
+} & (
+  EndDateType extends string ?
+    {
+      endDate: EndDateType;
+    } :
+  {
+    endDate?: EndDateType;
+  }
+);
+
 export interface AppMessages {
   home: {
     presentation: {
@@ -36,6 +66,17 @@ export interface AppMessages {
           }
         >;
       };
+    };
+
+    professionalExperience: {
+      title: string;
+      items: [
+        ProfessionalExperienceItem,
+        ProfessionalExperienceItem<[
+          ChangeOfPosition,
+          ChangeOfPosition<string>,
+        ]>,
+      ];
     };
   };
 }

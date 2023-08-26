@@ -58,13 +58,26 @@ const messages = computed(
 </template>
 
 <style scoped lang="scss">
-.v-col {
-  :deep(.v-card-title) {
-    color: var(--text-blue);
+.v-parallax {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  :deep(.v-responsive__sizer) {
+    padding: 0 !important;
   }
 
-  &:nth-last-of-type(odd) :deep(.v-card-title) {
-    color: var(--text-red);
+  :deep(.v-responsive__content) {
+    height: fit-content;
+  }
+
+  .v-col {
+    :deep(.v-card-title) {
+      color: var(--text-blue);
+    }
+
+    &:nth-last-of-type(odd) :deep(.v-card-title) {
+      color: var(--text-red);
+    }
   }
 }
 </style>
