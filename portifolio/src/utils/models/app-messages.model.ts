@@ -81,6 +81,10 @@ export interface AppMessages {
         ]>,
       ];
     };
+
+    knowledge: {
+      title: string;
+    };
   };
 }
 

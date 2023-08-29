@@ -87,5 +87,9 @@ export default new AppMessages({
         },
       ],
     },
+
+    knowledge: {
+      title: 'Conhecimentos',
+    },
   },
 });

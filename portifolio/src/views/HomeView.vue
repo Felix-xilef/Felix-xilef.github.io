@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Education from '@/components/home/Education.vue';
+import Knowledge from '@/components/home/Knowledge.vue';
 import Presentation from '@/components/home/Presentation.vue';
 import ProfessionalExperience from '@/components/home/ProfessionalExperience.vue';
 </script>
@@ -15,6 +16,10 @@ import ProfessionalExperience from '@/components/home/ProfessionalExperience.vue
 
   <section id="professional-experience">
     <ProfessionalExperience />
+  </section>
+
+  <section id="knowledge">
+    <Knowledge />
   </section>
 </template>
 
