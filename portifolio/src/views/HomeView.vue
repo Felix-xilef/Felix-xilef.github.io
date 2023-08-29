@@ -20,10 +20,18 @@ import ProfessionalExperience from '@/components/home/ProfessionalExperience.vue
 
 <style scoped lang="scss">
 section {
-  padding-top: 21vh;
+  padding-top: 30vh;
+
+  &:first-of-type {
+    padding-top: 21vh;
+  }
 
   @media (max-width: 960px) {
-    padding-top: 10vh;
+    padding-top: 20vh;
+
+    &:first-of-type {
+      padding-top: 10vh;
+    }
   }
 }
 </style>

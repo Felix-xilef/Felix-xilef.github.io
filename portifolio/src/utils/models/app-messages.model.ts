@@ -3,6 +3,7 @@ type ProfessionalExperienceItem<T extends ChangeOfPosition<any>[] | undefined = 
   enterprise: string;
   startDate: string;
   endDate?: string;
+  current?: string;
   description: string;
 } & (
   T extends ChangeOfPosition<any>[] ?
@@ -22,9 +23,11 @@ type ChangeOfPosition<EndDateType extends string | undefined = undefined> = {
   EndDateType extends string ?
     {
       endDate: EndDateType;
+      current: string;
     } :
   {
     endDate?: EndDateType;
+    current?: string;
   }
 );
 
