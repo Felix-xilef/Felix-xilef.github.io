@@ -90,6 +90,8 @@ export default new AppMessages({
 
     knowledge: {
       title: 'Conhecimentos',
+      moreKnowledgebleBoxTitle: 'Eu uso ou tenho mais conhecimento atualmente',
+      lessKnowledgebleBoxTitle: 'Eu tenho um conhecimento mais raso',
     },
   },
 });

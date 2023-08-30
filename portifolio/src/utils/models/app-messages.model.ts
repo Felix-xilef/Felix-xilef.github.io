@@ -84,6 +84,8 @@ export interface AppMessages {
 
     knowledge: {
       title: string;
+      moreKnowledgebleBoxTitle: string;
+      lessKnowledgebleBoxTitle: string;
     };
   };
 }
