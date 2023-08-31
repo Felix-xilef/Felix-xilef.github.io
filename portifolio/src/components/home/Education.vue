@@ -72,11 +72,11 @@ const messages = computed(
 
   .v-col {
     :deep(.v-card-title) {
-      color: var(--text-blue);
+      color: rgb(var(--v-theme-primary));
     }
 
     &:nth-last-of-type(odd) :deep(.v-card-title) {
-      color: var(--text-red);
+      color: rgb(var(--v-theme-secondary));
     }
   }
 }

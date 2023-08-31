@@ -40,6 +40,8 @@ const messages = computed(
       v-else
       :enterprises-style="enterprisesStyle"
     />
+
+    <hr>
   </div>
 </template>
 

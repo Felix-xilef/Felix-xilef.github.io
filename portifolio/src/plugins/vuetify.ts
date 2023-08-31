@@ -1,7 +1,5 @@
-import nestjsSvg from '@/assets/images/icons/nestjs.svg';
-import typeormSvg from '@/assets/images/icons/typeorm.svg';
+import icons from '@/icons';
 import { LanguageTag } from '@/utils/enums/language-tag.enum';
-import '@mdi/font/css/materialdesignicons.css';
 import { createVuetify } from 'vuetify';
 import 'vuetify/styles';
 
@@ -10,20 +8,15 @@ export default createVuetify({
     fallback: LanguageTag.ENGLISH,
   },
 
-  icons: {
-    aliases: {
-      nestjs: nestjsSvg,
-      typeorm: typeormSvg,
-    },
-  },
+  icons,
 
   theme: {
     defaultTheme: 'dark',
     themes: {
       dark: {
         colors: {
-          primary: '#1867C0',
-          secondary: '#5CBBF6',
+          primary: '#4B9EF3',
+          secondary: '#ED5058',
         },
       },
     },

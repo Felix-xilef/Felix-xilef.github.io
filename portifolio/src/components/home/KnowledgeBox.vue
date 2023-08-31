@@ -9,28 +9,65 @@ const props = defineProps<{
 </script>
 
 <template>
-  <v-container>
-    <h3>
+  <v-card
+    variant="outlined"
+    :color="color"
+    elevation="0"
+    border="0"
+  >
+    <v-card-title tag="h3">
       {{ title }}
-    </h3>
+    </v-card-title>
 
-    <v-row>
-      <v-col
-        v-for="item, i of items"
-        :key="`item-${i}`"
-      >
-        <v-icon
-          size="x-large"
-          :icon="item.icon"
-        ></v-icon>
+    <v-card
+      variant="outlined"
+      :color="color"
+      elevation="0"
+      border="dashed"
+    >
+      <v-row justify="center">
+        <v-col
+          v-for="item, i of items"
+          :key="`item-${i}`"
+          cols="auto"
+        >
+          <v-icon
+            size="x-large"
+            :icon="item.icon"
+            :color="item.color"
+          ></v-icon>
 
-        <span>
-          {{ item.name }}
-        </span>
-      </v-col>
-    </v-row>
-  </v-container>
+          <span>
+            {{ item.name }}
+          </span>
+        </v-col>
+      </v-row>
+    </v-card>
+  </v-card>
 </template>
 
 <style scoped lang="scss">
+.v-card {
+  width: fit-content;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  .v-card-title {
+    text-align: center;
+  }
+
+  .v-row {
+    padding: 1.5rem;
+    gap: .5rem;
+
+    .v-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      color: rgb(var(--v-theme-on-background));
+    }
+  }
+}
 </style>

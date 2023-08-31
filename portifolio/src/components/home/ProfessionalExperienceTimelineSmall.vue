@@ -130,8 +130,12 @@ const messages = computed(
 
 <style scoped lang="scss">
 .v-expansion-panels {
-  &.parent > .v-expansion-panel {
-    margin-top: 1rem;
+  &.parent {
+    padding-bottom: 1rem;
+
+    & > .v-expansion-panel {
+      margin-top: 1rem;
+    }
   }
 
   &.child {
