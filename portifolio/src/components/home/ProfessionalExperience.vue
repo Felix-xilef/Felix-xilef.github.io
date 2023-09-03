@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import SabespLogo from '@/assets/images/sabesp_logo.png';
-import SmartStaffLogo from '@/assets/images/smart-staff_logo.png';
+import SabespLogo from '@/assets/images/enterprises-logos/sabesp.png';
+import SmartStaffLogo from '@/assets/images/enterprises-logos/smart-staff.png';
 import { useMessageStore } from '@/stores/message.store';
 import type { EnterpriseStyle } from '@/utils/interfaces/enterprise-style.interface';
 import { computed } from 'vue';
@@ -25,12 +25,12 @@ const messages = computed(
 </script>
 
 <template>
-  <div class="component-wrapper">
+  <div class="professional-experience-wrapper">
     <h1>
       {{ messages.title }}
     </h1>
 
-    <hr>
+    <v-divider :thickness="3"></v-divider>
 
     <ProfessionalExperienceTimelineSmall
       v-if="useDisplay().smAndDown.value"
@@ -41,34 +41,29 @@ const messages = computed(
       :enterprises-style="enterprisesStyle"
     />
 
-    <hr>
+    <v-divider :thickness="3"></v-divider>
   </div>
 </template>
 
 <style scoped lang="scss">
 @use '@/assets/styles/mixins.scss';
 
-.component-wrapper {
+.professional-experience-wrapper {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  text-align: center;
 
   h1 {
-    width: fit-content;
+    max-width: fit-content;
     margin-right: auto;
+    padding-bottom: .5rem;
 
-    font-size: 32px;
+    font-size: 36px;
 
     @include mixins.linear-text-gradient;
   }
 
-  hr {
-    height: 2px;
-    width: 100%;
-
-    border: none;
-
-    background: rgba(var(--v-border-color), var(--v-border-opacity));
+  .v-divider {
+    color: rgb(var(--v-border-color));
   }
 }
 </style>

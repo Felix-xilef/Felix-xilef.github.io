@@ -111,21 +111,21 @@ const lessKnowledgebleItems: KnowledgeItem[] = [
 </script>
 
 <template>
-  <div class="component-wrapper">
+  <div class="knowledge-wrapper">
     <h1>
       {{ messages.title }}
     </h1>
 
     <KnowledgeBox
       :title="messages.moreKnowledgebleBoxTitle"
-      color="primary"
+      color="heading-1"
       :items="moreKnowledgebleItems"
       class="knowledge-box"
     />
 
     <KnowledgeBox
       :title="messages.lessKnowledgebleBoxTitle"
-      color="secondary"
+      color="on-background"
       :items="lessKnowledgebleItems"
       class="knowledge-box"
     />
@@ -135,12 +135,12 @@ const lessKnowledgebleItems: KnowledgeItem[] = [
 <style scoped lang="scss">
 @use '@/assets/styles/mixins.scss';
 
-.component-wrapper {
+.knowledge-wrapper {
   padding-left: 3rem;
   padding-right: 3rem;
 
   h1 {
-    width: fit-content;
+    max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
 

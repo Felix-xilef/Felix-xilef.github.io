@@ -12,7 +12,7 @@ const props = defineProps<{
 
 <template>
   <v-card>
-    <v-card-title tag="h4">
+    <v-card-title tag="h1">
       <v-icon :icon="icon"></v-icon>
 
       <span>
@@ -57,6 +57,8 @@ const props = defineProps<{
     align-items: center;
     gap: .5rem;
 
+    max-width: fit-content;
+
     .v-icon {
       --v-icon-size-multiplier: .8;
     }
@@ -74,11 +76,12 @@ const props = defineProps<{
       .name {
         font-size: 22px;
         padding-bottom: .3rem;
+
+        color: rgb(var(--v-theme-heading-2));
       }
 
       .description {
         font-size: 17px;
-        opacity: var(--v-medium-emphasis-opacity);
       }
     }
 

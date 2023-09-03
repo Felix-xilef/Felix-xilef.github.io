@@ -72,7 +72,7 @@ const messages = computed(
   padding: 1rem;
 
   h1 {
-    width: fit-content;
+    max-width: fit-content;
     font-size: 45px;
 
     @include mixins.linear-text-gradient;

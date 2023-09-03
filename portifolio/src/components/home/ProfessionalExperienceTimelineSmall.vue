@@ -16,8 +16,13 @@ const messages = computed(
 <template>
   <v-expansion-panels class="parent">
     <template v-for="experience, i of messages">
-      <v-expansion-panel :style="{ borderRadius: 'var(--border-radius) !important' }">
-        <v-expansion-panel-title :style="{ backgroundColor: enterprisesStyle[i].color }">
+      <v-expansion-panel
+        :style="{
+          borderRadius: 'var(--border-radius) !important',
+          '--enterprise-color': enterprisesStyle[i].color,
+        }"
+      >
+        <v-expansion-panel-title>
           <v-row
             no-gutters
             align="center"
@@ -73,10 +78,9 @@ const messages = computed(
         <v-expansion-panels class="child">
           <v-expansion-panel
             v-for="change of experience.changesOfPosition"
-            class="change-of-position"
             :style="{ borderRadius: 'var(--border-radius) !important' }"
           >
-            <v-expansion-panel-title :style="{ color: enterprisesStyle[i].color }">
+            <v-expansion-panel-title>
               <v-row
                 no-gutters
                 align="center"
@@ -110,7 +114,7 @@ const messages = computed(
             <v-expansion-panel-text>
               <h4>
                 <v-icon icon="$mdi-calendar-range"></v-icon>
-  
+
                 <ProfessionalExperienceDate
                   :start-date="change.startDate"
                   :end-date="change.endDate"
@@ -135,6 +139,14 @@ const messages = computed(
 
     & > .v-expansion-panel {
       margin-top: 1rem;
+
+      .v-expansion-panel-title {
+        background-color: var(--enterprise-color);
+
+        &, h2 {
+          color: rgb(var(--v-theme-heading-1));
+        }
+      }
     }
   }
 
@@ -144,6 +156,12 @@ const messages = computed(
 
     .v-expansion-panel {
       margin-top: .5rem;
+
+      .v-expansion-panel-title {
+        &, h2 {
+          color: rgb(var(--v-theme-heading-3));
+        }
+      }
     }
   }
 
@@ -166,7 +184,7 @@ const messages = computed(
         gap: .2rem;
         padding-bottom: .75rem;
 
-        opacity: .5;
+        opacity: .7;
       }
     }
   }

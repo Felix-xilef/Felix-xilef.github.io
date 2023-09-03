@@ -50,7 +50,10 @@ function getCurrentSlot(isDateSection: boolean, index: number) {
 
         <template v-slot:[getCurrentSlot(false,i)]>
           <v-card>
-            <v-card-title :style="{ backgroundColor: enterprisesStyle[i].color }">
+            <v-card-title
+              tag="h1"
+              :style="{ backgroundColor: enterprisesStyle[i].color }"
+            >
               {{ experience.title }}
 
               <v-badge
@@ -94,7 +97,10 @@ function getCurrentSlot(isDateSection: boolean, index: number) {
               color="transparent"
               elevation="0"
             >
-              <v-card-title :style="{ color: enterprisesStyle[i].color }">
+              <v-card-title
+                tag="h2"
+                :style="{ color: enterprisesStyle[i].color }"
+              >
                 {{ change.positionName }}
 
                 <v-badge
@@ -117,11 +123,17 @@ function getCurrentSlot(isDateSection: boolean, index: number) {
 </template>
 
 <style scoped lang="scss">
-.v-card-subtitle {
-  display: flex;
-  align-items: flex-end;
-  gap: .2rem;
+.v-card {
+  .v-card-title {
+    font-weight: 700;
+  }
 
-  padding-top: .5rem;
+  .v-card-subtitle {
+    display: flex;
+    align-items: flex-end;
+    gap: .2rem;
+
+    padding-top: .5rem;
+  }
 }
 </style>

@@ -69,15 +69,5 @@ const messages = computed(
   :deep(.v-responsive__content) {
     height: fit-content;
   }
-
-  .v-col {
-    :deep(.v-card-title) {
-      color: rgb(var(--v-theme-primary));
-    }
-
-    &:nth-last-of-type(odd) :deep(.v-card-title) {
-      color: rgb(var(--v-theme-secondary));
-    }
-  }
 }
 </style>

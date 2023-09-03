@@ -48,13 +48,15 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .v-card {
-  width: fit-content;
+  max-width: fit-content;
 
   margin-left: auto;
   margin-right: auto;
 
   .v-card-title {
     text-align: center;
+
+    color: inherit;
   }
 
   .v-row {
