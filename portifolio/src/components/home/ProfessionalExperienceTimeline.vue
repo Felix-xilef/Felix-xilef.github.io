@@ -62,7 +62,7 @@ function getCurrentSlot(isDateSection: boolean, index: number) {
             </v-card-title>
 
             <v-card-subtitle>
-              <v-icon icon="mdi-office-building-marker"></v-icon>
+              <v-icon icon="$mdi-office-building-marker"></v-icon>
 
               <span>
                 {{ experience.enterprise }}

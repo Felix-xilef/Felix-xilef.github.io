@@ -11,28 +11,28 @@ const messages = computed(
 const moreKnowledgebleItems: KnowledgeItem[] = [
   {
     name: 'Vue',
-    icon: 'mdi-vuejs',
+    icon: 'custom:vue',
     color: '#42b883',
   },
   {
     name: 'Vuetify',
-    icon: 'mdi-vuetify',
-    color: '#2196f3',
+    icon: '$vuetify',
+    color: '#1697F6',
   },
   {
     name: 'Angular',
-    icon: 'mdi-angular',
+    icon: 'custom:angular',
     color: '#c3002f',
   },
   {
     name: 'Bootstrap',
-    icon: 'mdi-bootstrap',
+    icon: 'custom:bootstrap',
     color: '#9461fb',
   },
   {
     name: 'NestJS',
     icon: 'custom:nestjs',
-    color: '#ea2845',
+    color: '#e0234e',
   },
   {
     name: 'TypeORM',
@@ -41,37 +41,42 @@ const moreKnowledgebleItems: KnowledgeItem[] = [
   },
   {
     name: 'Sql',
-    icon: 'mdi-database',
+    icon: '$mdi-database',
     color: '#ffc107',
   },
   {
     name: 'Docker',
-    icon: 'mdi-docker',
-    color: '#007bff',
+    icon: 'custom:docker',
+    color: '#1D63ED',
   },
   {
     name: 'Python',
-    icon: 'mdi-language-python',
+    icon: 'custom:python',
     color: '#ffd343',
   },
   {
+    name: 'Node.js',
+    icon: 'custom:nodejs',
+    color: '#5fa04e',
+  },
+  {
     name: 'TypeScript',
-    icon: 'mdi-language-typescript',
+    icon: '$mdi-language-typescript',
     color: '#3178c6',
   },
   {
     name: 'JavaScript',
-    icon: 'mdi-language-javascript',
+    icon: '$mdi-language-javascript',
     color: '#f7df1e',
   },
   {
-    name: 'HTML 5',
-    icon: 'mdi-language-html5',
+    name: 'HTML5',
+    icon: '$mdi-language-html5',
     color: '#ff5722',
   },
   {
-    name: 'CSS 3',
-    icon: 'mdi-language-css3',
+    name: 'CSS3',
+    icon: '$mdi-language-css3',
     color: '#2196f3',
   },
 ];
@@ -79,18 +84,28 @@ const moreKnowledgebleItems: KnowledgeItem[] = [
 const lessKnowledgebleItems: KnowledgeItem[] = [
   {
     name: 'Java',
-    icon: 'mdi-language-java',
+    icon: 'custom:java',
     color: '#3a75b0',
   },
   {
+    name: 'Flutter',
+    icon: 'custom:flutter',
+    color: '#027DFD',
+  },
+  {
+    name: 'Android Studio',
+    icon: '$mdi-android',
+    color: '#3ddc84',
+  },
+  {
     name: 'C',
-    icon: 'mdi-language-c',
-    color: '#004284',
+    icon: '$mdi-language-c',
+    color: '#00579E',
   },
   {
     name: 'C++',
-    icon: 'mdi-language-cpp',
-    color: '#004284',
+    icon: '$mdi-language-cpp',
+    color: '#00579E',
   },
 ];
 </script>
@@ -118,12 +133,20 @@ const lessKnowledgebleItems: KnowledgeItem[] = [
 </template>
 
 <style scoped lang="scss">
+@use '@/assets/styles/mixins.scss';
+
 .component-wrapper {
   padding-left: 3rem;
   padding-right: 3rem;
 
   h1 {
-    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 32px;
+
+    @include mixins.linear-text-gradient;
   }
 
   .knowledge-box {

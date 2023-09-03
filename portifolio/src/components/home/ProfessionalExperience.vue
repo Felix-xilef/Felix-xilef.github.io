@@ -46,13 +46,20 @@ const messages = computed(
 </template>
 
 <style scoped lang="scss">
+@use '@/assets/styles/mixins.scss';
+
 .component-wrapper {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   text-align: center;
 
   h1 {
+    width: fit-content;
+    margin-right: auto;
+
     font-size: 32px;
+
+    @include mixins.linear-text-gradient;
   }
 
   hr {

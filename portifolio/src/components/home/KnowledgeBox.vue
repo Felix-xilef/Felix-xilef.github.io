@@ -67,6 +67,11 @@ const props = defineProps<{
       align-items: center;
 
       color: rgb(var(--v-theme-on-background));
+
+      .v-icon :deep(svg) {
+        max-height: 1em;
+        max-width: 1em;
+      }
     }
   }
 }

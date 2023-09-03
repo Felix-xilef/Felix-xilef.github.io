@@ -14,7 +14,7 @@ const messages = computed(
       <v-row>
         <v-col cols="12">
           <EducationCard
-            icon="mdi-school"
+            icon="$mdi-school"
             :title="messages.college.title"
             :items="[
               {
@@ -28,7 +28,7 @@ const messages = computed(
 
         <v-col>
           <EducationCard
-            icon="mdi-certificate"
+            icon="$mdi-certificate"
             :title="messages.coursesAndCertifications.title"
             :items="Object.values(messages.coursesAndCertifications.items).map(
               item => ({
@@ -42,7 +42,7 @@ const messages = computed(
 
         <v-col>
           <EducationCard
-            icon="mdi-translate-variant"
+            icon="$mdi-translate-variant"
             :title="messages.languages.title"
             :items="Object.values(messages.languages.items).map(
               item => ({

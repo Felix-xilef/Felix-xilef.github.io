@@ -1,4 +1,3 @@
-import vuetify from "@/plugins/vuetify";
 import { LanguageTag } from "@/utils/enums/language-tag.enum";
 import enMessages from "@/utils/messages/en.messages";
 import type { AppMessages } from "@/utils/models/app-messages.model";
@@ -27,7 +26,7 @@ async function getMessages(languageTag: LanguageTag) {
 export const useMessageStore = defineStore(
   'message',
   () => {
-    const vuetifyLocale = vuetify.locale.current;
+    // const vuetifyLocale = vuetify.locale.current;
 
     const currentLanguage = ref(DEFAULT_LANGUAGE);
     const messages = ref(DEFAULT_LANGUAGE_MESSAGES);
@@ -63,7 +62,7 @@ export const useMessageStore = defineStore(
             newValue,
           );
 
-          vuetifyLocale.value = newValue;
+          // vuetifyLocale.value = newValue;
 
           messages.value = await getMessages(
             newValue,

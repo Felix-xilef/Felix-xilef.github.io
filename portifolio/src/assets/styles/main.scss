@@ -1,23 +1,26 @@
 @use './mixins.scss';
 
-@import './base.scss';
+@import './variables.scss';
 
-* {
+body,
+.v-application {
   text-align: justify;
 
   @include mixins.font-family-roboto;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include mixins.font-family-nunito;
-
-  * {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @include mixins.font-family-nunito;
+  }
+
+  @for $i from 1 through 4 {
+    h#{$i} {
+      color: rgb(var(--v-theme-heading-#{$i}));
+    }
   }
 }
 
@@ -27,13 +30,18 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(to top, var(--gradient-blue), var(--gradient-purple));
+  background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
 }
 
 ::-webkit-scrollbar-thumb {
   background: transparent;
   box-shadow: 0 0 0 100vh rgb(80, 80, 80);
+
   border-radius: 5px;
+}
+.scroll-on-top::-webkit-scrollbar-thumb {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {

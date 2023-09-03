@@ -30,7 +30,7 @@ import AppLogo from './AppLogo.vue';
 
     border: none;
 
-    background: linear-gradient(to right, var(--gradient-blue), var(--gradient-purple));
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   }
 
   .v-row {

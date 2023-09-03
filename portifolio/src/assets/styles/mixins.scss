@@ -1,6 +1,12 @@
-@mixin text-gradient($gradient: linear-gradient(to right, var(--gradient-purple), var(--gradient-blue))) {
+@mixin linear-text-gradient(
+  $direction: 135deg,
+  $start-color: var(--primary-color) 25%,
+  $end-color: var(--secondary-color),
+) {
   color: transparent;
-  background: $gradient;
+
+  background: linear-gradient($direction, $start-color, $end-color);
+
   background-clip: text;
   -moz-background-clip: text;
   -webkit-background-clip: text;

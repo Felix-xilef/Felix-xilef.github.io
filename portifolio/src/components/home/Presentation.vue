@@ -31,7 +31,7 @@ const messages = computed(
 
         <div class="social-links">
           <v-btn
-            icon="mdi-github"
+            icon="$mdi-github"
             variant="text"
             density="compact"
             size="x-large"
@@ -40,7 +40,7 @@ const messages = computed(
           ></v-btn>
 
           <v-btn
-            icon="mdi-linkedin"
+            icon="$mdi-linkedin"
             variant="text"
             density="compact"
             size="x-large"
@@ -75,7 +75,7 @@ const messages = computed(
     width: fit-content;
     font-size: 45px;
 
-    @include mixins.text-gradient;
+    @include mixins.linear-text-gradient;
   }
 
   .social-links {
@@ -95,7 +95,7 @@ const messages = computed(
   .v-img {
     $circumference-width: .25rem;
 
-    background: linear-gradient(135deg, var(--gradient-blue), var(--gradient-purple));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 
     border-radius: 50%;
 

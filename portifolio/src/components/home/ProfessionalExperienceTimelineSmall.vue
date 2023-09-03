@@ -47,7 +47,7 @@ const messages = computed(
 
         <v-expansion-panel-text>
           <h4>
-            <v-icon icon="mdi-office-building-marker"></v-icon>
+            <v-icon icon="$mdi-office-building-marker"></v-icon>
 
             <span>
               {{ experience.enterprise }}
@@ -55,7 +55,7 @@ const messages = computed(
           </h4>
 
           <h4>
-            <v-icon icon="mdi-calendar-range"></v-icon>
+            <v-icon icon="$mdi-calendar-range"></v-icon>
 
             <ProfessionalExperienceDate
               :start-date="experience.startDate"
@@ -109,7 +109,7 @@ const messages = computed(
 
             <v-expansion-panel-text>
               <h4>
-                <v-icon icon="mdi-calendar-range"></v-icon>
+                <v-icon icon="$mdi-calendar-range"></v-icon>
   
                 <ProfessionalExperienceDate
                   :start-date="change.startDate"
