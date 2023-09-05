@@ -1,17 +1,14 @@
 <script setup lang="ts">
+import CopyToClipboardButton from './utils/CopyToClipboardButton.vue';
+
 const props = defineProps<{
   icon: string;
   iconColor: string;
+  label: string;
   text: string;
   href: string;
   contentToCopy: string;
 }>();
-
-function copyToClipboard() {
-  navigator.clipboard.writeText(
-    props.contentToCopy,
-  );
-}
 </script>
 
 <template>
@@ -32,13 +29,10 @@ function copyToClipboard() {
       {{ text }}
     </v-btn>
 
-    <v-btn
-      variant="tonal"
-      class="copy-to-clipboard-button"
-      @click="copyToClipboard"
-    >
-      <v-icon icon="$mdi-content-copy"></v-icon>
-    </v-btn>
+    <CopyToClipboardButton
+      :label="label"
+      :content-to-copy="contentToCopy"
+    />
   </div>
 </template>
 
@@ -59,13 +53,6 @@ function copyToClipboard() {
 
   .v-btn {
     text-transform: none;
-
-    &.copy-to-clipboard-button {
-      padding-left: .5rem;
-      padding-right: .5rem;
-
-      min-width: initial;
-    }
   }
 }
 </style>

@@ -3,12 +3,18 @@ import { useEmailUrl } from '@/composables/url/email-url.composable';
 import { useGithubUrl } from '@/composables/url/github-url.composable';
 import { useLinkedinUrl } from '@/composables/url/linkedin-url.composable';
 import { useWhatsappUrl } from '@/composables/url/whatsapp-url.composable';
+import { useMessageStore } from '@/stores/message.store';
+import { computed } from 'vue';
 import AppFooterContactInfo from './AppFooterContactInfo.vue';
 
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
 const LINKEDIN_USERNAME = import.meta.env.VITE_LINKEDIN_USERNAME;
 const EMAIL = import.meta.env.VITE_EMAIL;
 const PHONE = import.meta.env.VITE_PHONE;
+
+const messages = computed(
+  () => useMessageStore().messages.footer,
+);
 </script>
 
 <template>
@@ -21,6 +27,7 @@ const PHONE = import.meta.env.VITE_PHONE;
         <AppFooterContactInfo
           icon="$mdi-github"
           icon-color="#f5f5f5"
+          :label="messages.linkLabel"
           :text="GITHUB_USERNAME"
           :href="useGithubUrl()"
           :content-to-copy="GITHUB_USERNAME"
@@ -31,6 +38,7 @@ const PHONE = import.meta.env.VITE_PHONE;
         <AppFooterContactInfo
           icon="$mdi-linkedin"
           icon-color="#0077b5"
+          :label="messages.linkLabel"
           :text="LINKEDIN_USERNAME"
           :href="useLinkedinUrl()"
           :content-to-copy="LINKEDIN_USERNAME"
@@ -41,6 +49,7 @@ const PHONE = import.meta.env.VITE_PHONE;
         <AppFooterContactInfo
           icon="$mdi-email"
           icon-color="secondary"
+          :label="messages.emailLabel"
           :text="EMAIL"
           :href="useEmailUrl()"
           :content-to-copy="EMAIL"
@@ -51,6 +60,7 @@ const PHONE = import.meta.env.VITE_PHONE;
         <AppFooterContactInfo
           icon="$mdi-whatsapp"
           icon-color="#25D366"
+          :label="messages.phoneLabel"
           :text="PHONE"
           :href="useWhatsappUrl()"
           :content-to-copy="PHONE"

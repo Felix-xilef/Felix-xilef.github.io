@@ -9,7 +9,7 @@ import nodejs from "@/assets/images/icons/nodejs.svg";
 import python from "@/assets/images/icons/python.svg";
 import typeorm from "@/assets/images/icons/typeorm.png";
 import vue from "@/assets/images/icons/vue.svg";
-import CustomIconVue from "@/components/CustomIcon.vue";
+import CustomIconVue from "@/components/utils/CustomIcon.vue";
 import { h } from 'vue';
 import type { IconSet } from "vuetify";
 

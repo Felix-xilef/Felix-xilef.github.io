@@ -94,4 +94,10 @@ export default new AppMessages({
       lessKnowledgebleBoxTitle: 'Uso com menos frequência ou tenho menos conhecimento',
     },
   },
+
+  footer: {
+    linkLabel: 'link',
+    emailLabel: 'e-mail',
+    phoneLabel: 'telefone',
+  },
 });

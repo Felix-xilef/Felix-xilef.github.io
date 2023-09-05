@@ -88,6 +88,12 @@ export interface AppMessages {
       lessKnowledgebleBoxTitle: string;
     };
   };
+
+  footer: {
+    linkLabel: string;
+    emailLabel: string;
+    phoneLabel: string;
+  };
 }
 
 export class AppMessages {
