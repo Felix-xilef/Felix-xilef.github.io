@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useGithubUrl } from '@/composables/url/github-url.composable';
+import { useLinkedinUrl } from '@/composables/url/linkedin-url.composable';
 import { useMessageStore } from '@/stores/message.store';
 import { computed } from 'vue';
 
@@ -35,7 +37,7 @@ const messages = computed(
             variant="text"
             density="compact"
             size="x-large"
-            href="https://github.com/Felix-xilef"
+            :href="useGithubUrl()"
             target="_blank"
           ></v-btn>
 
@@ -44,7 +46,7 @@ const messages = computed(
             variant="text"
             density="compact"
             size="x-large"
-            href="https://www.linkedin.com/in/felix-xilef/"
+            :href="useLinkedinUrl()"
             target="_blank"
           ></v-btn>
         </div>

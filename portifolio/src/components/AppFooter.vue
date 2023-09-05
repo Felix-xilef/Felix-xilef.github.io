@@ -1,32 +1,59 @@
 <script setup lang="ts">
+import { useEmailUrl } from '@/composables/url/email-url.composable';
+import { useGithubUrl } from '@/composables/url/github-url.composable';
+import { useLinkedinUrl } from '@/composables/url/linkedin-url.composable';
+import { useWhatsappUrl } from '@/composables/url/whatsapp-url.composable';
 import AppFooterContactInfo from './AppFooterContactInfo.vue';
 
+const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME;
+const LINKEDIN_USERNAME = import.meta.env.VITE_LINKEDIN_USERNAME;
+const EMAIL = import.meta.env.VITE_EMAIL;
+const PHONE = import.meta.env.VITE_PHONE;
 </script>
 
 <template>
   <v-footer>
-    <v-row no-gutters>
-      <v-col>
+    <v-row
+      justify="space-evenly"
+      no-gutters
+    >
+      <v-col cols="auto">
         <AppFooterContactInfo
           icon="$mdi-github"
-          text="Felix-xilef"
-          color="#171515"
+          icon-color="#f5f5f5"
+          :text="GITHUB_USERNAME"
+          :href="useGithubUrl()"
+          :content-to-copy="GITHUB_USERNAME"
         />
       </v-col>
 
-      <v-col>
+      <v-col cols="auto">
         <AppFooterContactInfo
           icon="$mdi-linkedin"
-          text="felix-xilef"
-          color="#0077b5"
+          icon-color="#0077b5"
+          :text="LINKEDIN_USERNAME"
+          :href="useLinkedinUrl()"
+          :content-to-copy="LINKEDIN_USERNAME"
         />
       </v-col>
 
-      <v-col>
+      <v-col cols="auto">
         <AppFooterContactInfo
           icon="$mdi-email"
-          text="petizfelix@gmail.com"
-          color="secondary"
+          icon-color="secondary"
+          :text="EMAIL"
+          :href="useEmailUrl()"
+          :content-to-copy="EMAIL"
+        />
+      </v-col>
+
+      <v-col cols="auto">
+        <AppFooterContactInfo
+          icon="$mdi-whatsapp"
+          icon-color="#25D366"
+          :text="PHONE"
+          :href="useWhatsappUrl()"
+          :content-to-copy="PHONE"
         />
       </v-col>
     </v-row>
@@ -44,16 +71,26 @@ import AppFooterContactInfo from './AppFooterContactInfo.vue';
   flex-direction: column;
   justify-content: center;
 
-  // padding-top: 0;
+  padding: 0;
 
   .v-row {
     width: 100%;
 
-    background-color: #e9e9e9;
+    padding: .75rem .25rem;
+
+    background-image: url('@/assets/images/parallax-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position-x: center;
+    background-position-y: bottom;
+
+    gap: .25rem;
   }
 
   h2 {
     max-width: fit-content;
+
+    padding: .2rem;
 
     @include mixins.linear-text-gradient;
   }

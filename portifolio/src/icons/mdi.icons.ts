@@ -1,4 +1,4 @@
-import { mdiAndroid, mdiCalendarRange, mdiCertificate, mdiContentCopy, mdiDatabase, mdiEmail, mdiGithub, mdiLanguageC, mdiLanguageCpp, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageTypescript, mdiLinkedin, mdiOfficeBuildingMarker, mdiSchool, mdiTranslateVariant } from "@mdi/js";
+import { mdiAndroid, mdiCalendarRange, mdiCertificate, mdiContentCopy, mdiDatabase, mdiEmail, mdiGithub, mdiLanguageC, mdiLanguageCpp, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageTypescript, mdiLinkedin, mdiOfficeBuildingMarker, mdiSchool, mdiTranslateVariant, mdiWhatsapp } from "@mdi/js";
 import type { IconAliases } from "vuetify";
 import { aliases } from "vuetify/iconsets/mdi-svg";
 
@@ -21,4 +21,5 @@ export const mdiAliases: Partial<IconAliases> = {
   'mdi-office-building-marker': mdiOfficeBuildingMarker,
   'mdi-school': mdiSchool,
   'mdi-translate-variant': mdiTranslateVariant,
+  'mdi-whatsapp': mdiWhatsapp,
 };

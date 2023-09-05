@@ -9,7 +9,10 @@ const messages = computed(
 </script>
 
 <template>
-  <v-parallax src="@/assets/images/parallax-background.jpg">
+  <v-parallax
+    src="@/assets/images/parallax-background.jpg"
+    height="fit-content"
+  >
     <v-container>
       <v-row>
         <v-col cols="12">
@@ -64,10 +67,6 @@ const messages = computed(
 
   :deep(.v-responsive__sizer) {
     padding: 0 !important;
-  }
-
-  :deep(.v-responsive__content) {
-    height: fit-content;
   }
 }
 </style>

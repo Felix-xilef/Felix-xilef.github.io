@@ -3,7 +3,7 @@ import { onMounted } from 'vue';
 import { RouterView } from 'vue-router';
 import AppBar from './components/AppBar.vue';
 import AppFooter from './components/AppFooter.vue';
-import { useScrollbarStyleOnScroll } from './composables/scrollbar-style-on-scroll.composable';
+import { useScrollbarStyleOnScroll } from './composables/style/scrollbar-style-on-scroll.composable';
 
 onMounted(() => {
   useScrollbarStyleOnScroll();
@@ -32,3 +32,4 @@ onMounted(() => {
   }
 }
 </style>
+./composables/style/scrollbar-style-on-scroll.composable
