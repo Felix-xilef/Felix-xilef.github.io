@@ -8,30 +8,30 @@ export default new AppMessages({
   home: {
     presentation: {
       title: 'Hello, I am Felix!',
-      description: 'Prazer, sou formado em Análise e Desenvolvimento de Sistemas pela Fatec São Caetano do Sul e atualmente atuo como desenvolvedor FullStack.',
+      description: 'I hold a degree in System Analysis and Development from Fatec São Caetano do Sul, and currently, I am immersed in the world of FullStack development.',
 
       profilePictureAlt: 'Profile Photo',
     },
 
     education: {
       college: {
-        title: 'Ensino Superior',
-        course: 'Análise e Desenvolvimento de Sistemas',
-        graduation: 'Graduado em Dez. de 2021',
+        title: 'Higher Education',
+        course: 'System Analysis and Development',
+        graduation: 'Graduated in Dec. 2021',
       },
 
       coursesAndCertifications: {
-        title: 'Cursos e Certificações',
+        title: 'Courses and Certifications',
         items: {
           linuxEssentials: {
-            name: 'Curso Linux Essentials',
+            name: 'Linux Essentials Course',
             institution: 'CISCO',
-            conclusion: 'Concluído em Dez. de 2020',
+            conclusion: 'Completed in Dec. 2020',
           },
           ctfl: {
-            name: 'Certificação em Teste de Software CTFL',
+            name: 'Certified Tester Foundation Level (CTFL)',
             institution: 'ISTQB',
-            conclusion: 'Emitido em Maio de 2019',
+            conclusion: 'Completed in May 2019',
           },
         },
       },
@@ -63,29 +63,29 @@ export default new AppMessages({
       title: 'Professional Experiences',
       items: [
         {
-          title: 'Estagiário em atendimento ao cliente',
+          title: 'Customer Service Internship',
           enterprise: 'Sabesp',
-          startDate: 'Jul. de 2017',
-          endDate: 'Jul. de 2018',
-          description: 'No final do ensino médio fiz um estágio na agência da Sabesp de São Mateus. Atuando nas áreas de atendimento ao cliente e também organização interna.',
+          startDate: 'July 2017',
+          endDate: 'July 2018',
+          description: 'In my last 2 years of high school, I did an internship at a Sabesp (Water treatment company) agency. Where I worked with customer service and internal organization.',
         },
         {
-          title: 'Estagiário em desenvolvimento de sistemas',
+          title: 'Systems Development Internship',
           enterprise: 'Smart Staff',
-          startDate: 'Maio de 2021',
-          description: 'Atuei criando novos sistemas e funcionalidades, assim como dando manutenção aos já existentes. Tive experiências, principalmente com os frameworks Angular, Vue e NestJS em TypeScript/JavaScript, assim como JSF e Play em Java.',
+          startDate: 'May 2021',
+          description: 'I worked on creating new systems and functionalities, as well as providing maintenance for existing ones. I gained experience, primarily with the Angular, Vue, and NestJS, but I also had some exposure to JSF and Play Framework.',
           changesOfPosition: [
             {
-              positionName: 'Assistente de Desenvolvimento',
-              startDate: 'Mar. de 2022',
-              description: 'Ao final do estágio, fui contratado como assitente Sendo responsável, principalmente pelo desenvolvimento e manutenção de um sistema de controle de insumos e um sistema de controle de horário com foto e geolocalização. Usando, principalmente Angular e Vue no front-end e NestJS no back-end.',
+              positionName: 'Development Assistant',
+              startDate: 'Mar. 2022',
+              description: 'At the end of the internship, I was hired as an assistant, primarily responsible for the development and maintenance of an input control system and a time tracking system with photo and geolocation features. I used Angular, Vue, and NestJS with TypeORM for these tasks.',
             },
             {
-              positionName: 'Desenvolvedor de Sistemas Júnior',
-              startDate: 'Ago. de 2022',
-              endDate: 'Hoje',
-              current: 'Posição Atual',
-              description: 'Atualmente atuo como desenvolvedor de sistemas júnior. Continuo trabalhando na maior parte do tempo com os mesmos sistemas, porém também participo das novas solução desenvolvidas pela equipe de desenvolvimento.',
+              positionName: 'Junior Systems Developer',
+              startDate: 'Aug. 2022',
+              endDate: 'Present',
+              current: 'Current Position',
+              description: 'I currently work as a Junior Systems Developer. Most of the time, I still work on the same systems, but I also participate in the development of new solutions created by the team.',
             },
           ],
         },
@@ -93,9 +93,9 @@ export default new AppMessages({
     },
 
     knowledge: {
-      title: 'Conhecimentos',
-      moreKnowledgebleBoxTitle: 'Tenho mais experiência e conhecimento',
-      lessKnowledgebleBoxTitle: 'Uso com menos frequência ou tenho menos conhecimento',
+      title: 'Knowledge & Skills',
+      moreKnowledgebleBoxTitle: 'I have more experience and knowledge',
+      lessKnowledgebleBoxTitle: 'I use less often or have less knowledge',
     },
   },
 

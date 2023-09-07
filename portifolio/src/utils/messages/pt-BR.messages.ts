@@ -8,7 +8,7 @@ export default new AppMessages({
   home: {
     presentation: {
       title: 'Olá, eu sou Felix!',
-      description: 'Prazer, sou formado em Análise e Desenvolvimento de Sistemas pela Fatec São Caetano do Sul e atualmente atuo como desenvolvedor FullStack.',
+      description: 'Sou graduado em Análise e Desenvolvimento de Sistemas pela Fatec São Caetano do Sul e, atualmente, estou mergulhado no mundo do desenvolvimento FullStack.',
 
       profilePictureAlt: 'Foto de perfil',
     },
@@ -31,7 +31,7 @@ export default new AppMessages({
           ctfl: {
             name: 'Certificação em Teste de Software CTFL',
             institution: 'ISTQB',
-            conclusion: 'Emitido em Maio de 2019',
+            conclusion: 'Concluída em Maio de 2019',
           },
         },
       },
@@ -63,29 +63,29 @@ export default new AppMessages({
       title: 'Experiências Profissionais',
       items: [
         {
-          title: 'Estagiário em atendimento ao cliente',
+          title: 'Estágio em atendimento ao cliente',
           enterprise: 'Sabesp',
           startDate: 'Jul. de 2017',
           endDate: 'Jul. de 2018',
           description: 'No final do ensino médio fiz um estágio na agência da Sabesp de São Mateus. Atuando nas áreas de atendimento ao cliente e também organização interna.',
         },
         {
-          title: 'Estagiário em desenvolvimento de sistemas',
+          title: 'Estágio em desenvolvimento de sistemas',
           enterprise: 'Smart Staff',
           startDate: 'Maio de 2021',
-          description: 'Atuei criando novos sistemas e funcionalidades, assim como dando manutenção aos já existentes. Tive experiências, principalmente com os frameworks Angular, Vue e NestJS em TypeScript/JavaScript, assim como JSF e Play em Java.',
+          description: 'Atuei criando novos sistemas e funcionalidades, assim como dando manutenção aos já existentes. Tive experiências, principalmente, com os frameworks Angular, Vue e NestJS, mas também trabalhei um puco com JSF e Play Framework.',
           changesOfPosition: [
             {
               positionName: 'Assistente de Desenvolvimento',
               startDate: 'Mar. de 2022',
-              description: 'Ao final do estágio, fui contratado como assitente Sendo responsável, principalmente pelo desenvolvimento e manutenção de um sistema de controle de insumos e um sistema de controle de horário com foto e geolocalização. Usando, principalmente Angular e Vue no front-end e NestJS no back-end.',
+              description: 'Ao final do estágio, fui contratado como assitente. Sendo responsável, principalmente, pelo desenvolvimento e manutenção de um sistema de controle de insumos e um sistema de controle de horário com foto e geolocalização. Usando Angular, Vue e NestJS com TypeORM.',
             },
             {
               positionName: 'Desenvolvedor de Sistemas Júnior',
               startDate: 'Ago. de 2022',
               endDate: 'Hoje',
               current: 'Posição Atual',
-              description: 'Atualmente atuo como desenvolvedor de sistemas júnior. Continuo trabalhando na maior parte do tempo com os mesmos sistemas, porém também participo das novas solução desenvolvidas pela equipe de desenvolvimento.',
+              description: 'Atualmente atuo como desenvolvedor de sistemas júnior. Continuo trabalhando na maior parte do tempo com os mesmos sistemas, porém também participo das novas solução desenvolvidas pela equipe.',
             },
           ],
         },
