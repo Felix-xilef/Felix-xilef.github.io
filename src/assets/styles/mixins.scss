@@ -1,0 +1,21 @@
+@mixin linear-text-gradient(
+  $direction: 135deg,
+  $start-color: var(--primary-color) 25%,
+  $end-color: var(--secondary-color),
+) {
+  color: transparent;
+
+  background: linear-gradient($direction, $start-color, $end-color);
+
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@mixin font-family-nunito {
+  font-family: Nunito, sans-serif;
+}
+
+@mixin font-family-roboto {
+  font-family: Roboto, sans-serif;
+}
