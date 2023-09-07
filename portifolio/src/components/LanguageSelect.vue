@@ -16,6 +16,10 @@ const languages = [
     label: 'English',
   },
 ];
+
+function getFlagIcon(item: (typeof languages)[number]) {
+  return `custom:flag-${item.icon}`;
+}
 </script>
 
 <template>
@@ -27,11 +31,16 @@ const languages = [
     :items="languages"
     item-title="label"
     item-value="tag"
+    hide-details
   >
+    <template v-slot:selection="{ item }">
+      <v-icon :icon="getFlagIcon(item.raw)"></v-icon>
+    </template>
+
     <template v-slot:item="{ props, item }">
       <v-list-item
         v-bind="props"
-        :prepend-icon="`custom:flag-${item.raw.icon}`"
+        :prepend-icon="getFlagIcon(item.raw)"
       ></v-list-item>
     </template>
   </v-select>

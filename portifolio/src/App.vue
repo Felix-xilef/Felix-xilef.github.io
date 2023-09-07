@@ -25,11 +25,10 @@ onMounted(() => {
 <style scoped lang="scss">
 .v-main,
 .app-footer {
-  margin-top: 21vh;
+  margin-top: 30vh;
 
   @media (max-width: 960px) {
-    margin-top: 10vh;
+    margin-top: 20vh;
   }
 }
 </style>
-./composables/style/scrollbar-style-on-scroll.composable

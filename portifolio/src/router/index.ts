@@ -8,9 +8,15 @@ export default createRouter({
 
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: RouteName.HOME,
       component: () => import('../views/HomeView.vue'),
+    },
+    {
+      path: '/:anything*',
+      redirect: {
+        name: RouteName.HOME,
+      },
     },
   ]
 });

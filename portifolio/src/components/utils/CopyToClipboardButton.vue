@@ -3,7 +3,8 @@ import { useMessageStore } from '@/stores/message.store';
 import { computed, ref, watch } from 'vue';
 
 enum State {
-  DEFAULT,
+  READY,
+  LOADING,
   SUCCESS,
 }
 
@@ -12,14 +13,16 @@ const props = defineProps<{
   contentToCopy: string;
 }>();
 
-const currentState = ref(State.DEFAULT);
+const currentState = ref(State.READY);
 
 const messages = computed(
   () => useMessageStore().messages.copyToClipboardButton,
 );
 
-function copyToClipboard() {
-  navigator.clipboard.writeText(
+async function copyToClipboard() {
+  currentState.value = State.LOADING;
+
+  await navigator.clipboard.writeText(
     props.contentToCopy,
   );
 
@@ -31,7 +34,7 @@ watch(
   newValue => {
     if (newValue === State.SUCCESS) {
       setTimeout(
-        () => currentState.value = State.DEFAULT,
+        () => currentState.value = State.READY,
         2000,
       );
     }
@@ -46,10 +49,16 @@ watch(
   >
     <v-scale-transition leave-absolute>
       <v-icon
-        v-if="currentState === State.DEFAULT"
+        v-if="currentState === State.READY"
         icon="$mdi-content-copy"
         size="18"
       ></v-icon>
+      <v-progress-circular
+        v-else-if="currentState === State.LOADING"
+        size="18"
+        width="3"
+        indeterminate
+      ></v-progress-circular>
       <v-icon
         v-else
         icon="$mdi-check"
@@ -61,8 +70,10 @@ watch(
     <v-tooltip
       activator="parent"
       :text="
-        currentState === State.DEFAULT ?
+        currentState === State.READY ?
           `${messages.copyLabel} ${label}` :
+        currentState === State.LOADING ?
+          '...' :
         messages.successMessage
       "
     ></v-tooltip>
