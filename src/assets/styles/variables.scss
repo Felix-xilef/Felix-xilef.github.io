@@ -1,0 +1,10 @@
+$variables: (
+  "primary-color": #9f58ea,
+  "secondary-color": #ed5058,
+);
+
+:root {
+  @each $name, $value in $variables {
+    --#{$name}: #{$value};
+  }
+}
