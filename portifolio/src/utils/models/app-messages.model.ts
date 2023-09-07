@@ -32,6 +32,10 @@ type ChangeOfPosition<EndDateType extends string | undefined = undefined> = {
 );
 
 export interface AppMessages {
+  appBar: {
+    language: string;
+  };
+
   home: {
     presentation: {
       title: string;
@@ -93,6 +97,11 @@ export interface AppMessages {
     linkLabel: string;
     emailLabel: string;
     phoneLabel: string;
+  };
+
+  copyToClipboardButton: {
+    copyLabel: string;
+    successMessage: string;
   };
 }
 

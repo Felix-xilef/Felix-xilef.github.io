@@ -1,26 +1,10 @@
 <script setup lang="ts">
-import { useWait } from '@/composables/timeout/wait.composable';
-import { ref, watch } from 'vue';
+import { useMessageStore } from '@/stores/message.store';
+import { computed, ref, watch } from 'vue';
 
 enum State {
   DEFAULT,
-  PROGRESS,
   SUCCESS,
-}
-
-const STATE_OPTIONS = {
-  [State.DEFAULT]: {
-    next: State.PROGRESS,
-    timeout: 0,
-  },
-  [State.PROGRESS]: {
-    next: State.SUCCESS,
-    timeout: 200,
-  },
-  [State.SUCCESS]: {
-    next: State.DEFAULT,
-    timeout: 1000,
-  },
 }
 
 const props = defineProps<{
@@ -30,29 +14,26 @@ const props = defineProps<{
 
 const currentState = ref(State.DEFAULT);
 
+const messages = computed(
+  () => useMessageStore().messages.copyToClipboardButton,
+);
+
 function copyToClipboard() {
   navigator.clipboard.writeText(
     props.contentToCopy,
   );
 
-  goToNextState();
-}
-
-async function goToNextState() {
-  if (STATE_OPTIONS[currentState.value].timeout > 0) {
-    await useWait(
-      STATE_OPTIONS[currentState.value].timeout,
-    );
-  }
-
-  currentState.value = STATE_OPTIONS[currentState.value].next;
+  currentState.value = State.SUCCESS;
 }
 
 watch(
   currentState,
   newValue => {
-    if (newValue !== State.DEFAULT) {
-      goToNextState();
+    if (newValue === State.SUCCESS) {
+      setTimeout(
+        () => currentState.value = State.DEFAULT,
+        2000,
+      );
     }
   },
 );
@@ -63,32 +44,26 @@ watch(
     variant="tonal"
     @click="copyToClipboard"
   >
-    <v-icon
-      v-if="currentState === State.DEFAULT"
-      icon="$mdi-content-copy"
-      size="18"
-    ></v-icon>
-    <v-progress-circular
-      v-else-if="currentState === State.PROGRESS"
-      indeterminate
-      size="18"
-      width="2"
-    ></v-progress-circular>
-    <v-icon
-      v-else
-      icon="$mdi-check"
-      size="18"
-      color="success"
-    ></v-icon>
+    <v-scale-transition leave-absolute>
+      <v-icon
+        v-if="currentState === State.DEFAULT"
+        icon="$mdi-content-copy"
+        size="18"
+      ></v-icon>
+      <v-icon
+        v-else
+        icon="$mdi-check"
+        size="18"
+        color="success"
+      ></v-icon>
+    </v-scale-transition>
 
     <v-tooltip
       activator="parent"
       :text="
         currentState === State.DEFAULT ?
-          `Copiar ${label}` :
-        currentState === State.SUCCESS ?
-          'Copiado com sucesso!' :
-        ''
+          `${messages.copyLabel} ${label}` :
+        messages.successMessage
       "
     ></v-tooltip>
   </v-btn>

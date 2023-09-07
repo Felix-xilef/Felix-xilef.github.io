@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppLogo from './AppLogo.vue';
+import LanguageSelect from './LanguageSelect.vue';
 </script>
 
 <template>
@@ -12,6 +13,12 @@ import AppLogo from './AppLogo.vue';
     >
       <v-col>
         <AppLogo height="1.75rem"/>
+      </v-col>
+
+      <v-spacer></v-spacer>
+
+      <v-col>
+        <LanguageSelect />
       </v-col>
     </v-row>
   </v-app-bar>

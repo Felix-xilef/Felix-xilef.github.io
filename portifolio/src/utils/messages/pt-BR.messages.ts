@@ -1,6 +1,10 @@
 import { AppMessages } from "../models/app-messages.model";
 
 export default new AppMessages({
+  appBar: {
+    language: 'Idioma',
+  },
+
   home: {
     presentation: {
       title: 'Olá, eu sou Felix!',
@@ -99,5 +103,10 @@ export default new AppMessages({
     linkLabel: 'link',
     emailLabel: 'e-mail',
     phoneLabel: 'telefone',
+  },
+
+  copyToClipboardButton: {
+    copyLabel: 'Copiar',
+    successMessage: 'Copiado com sucesso!',
   },
 });

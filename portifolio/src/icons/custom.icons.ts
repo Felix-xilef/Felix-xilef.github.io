@@ -10,6 +10,8 @@ import python from "@/assets/images/icons/python.svg";
 import typeorm from "@/assets/images/icons/typeorm.png";
 import vue from "@/assets/images/icons/vue.svg";
 import CustomIconVue from "@/components/utils/CustomIcon.vue";
+import br from "flag-icons/flags/4x3/br.svg";
+import us from "flag-icons/flags/4x3/us.svg";
 import { h } from 'vue';
 import type { IconSet } from "vuetify";
 
@@ -25,6 +27,8 @@ export const customAliases: Record<string, string> = {
   python,
   typeorm,
   vue,
+  'flag-br': br,
+  'flag-us': us,
 };
 
 export const customSet: IconSet = {

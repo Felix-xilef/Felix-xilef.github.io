@@ -1349,6 +1349,11 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
+flag-icons@^6.11.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/flag-icons/-/flag-icons-6.11.0.tgz#5179bb98c08253a9e408b494a302d69b7bdfcc20"
+  integrity sha512-oK+QhV5UMWq+lmyOnfXUfVhSgHy29gQ0gQpmORdNP6ucAsKzIGm39ncvyThJyvt76Au2qsepDTE9waHRuaYPUw==
+
 follow-redirects@^1.14.9:
   version "1.15.2"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz"

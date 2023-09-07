@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
+    "flag-icons": "^6.11.0",
     "pinia": "^2.1.4",
     "roboto-fontface": "*",
     "vue": "^3.3.4",
