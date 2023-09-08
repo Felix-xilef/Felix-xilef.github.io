@@ -9,17 +9,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
 
-      - name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          push: false
-          tags: app:latest
+      - name: Install
+        run: yarn install
 
-      - name: Start container
-        run: docker run --publish 80:80 app:latest
+      - name: Tests
+        run: yarn test:unit run --bail 1
+
+      - name: Build
+        run: yarn build
+
+      - name: Organize files
+        run: mv . /usr/app-files |
+          mv /usr/app-files/dist . |
+          mv /usr/app-files/node_modules ./node_modules
