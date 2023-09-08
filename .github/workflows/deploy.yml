@@ -20,5 +20,6 @@ jobs:
         with:
           push: false
           tags: app:latest
-    container:
-      image: app:latest
+
+      - name: Start container
+        run: docker run --publish 80:80 app:latest
