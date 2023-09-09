@@ -26,5 +26,5 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Organize files
-        run: mv dist/* ./
+      - name: Go to build
+        run: cd dist
