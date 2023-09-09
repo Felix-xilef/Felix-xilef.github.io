@@ -34,7 +34,7 @@ jobs:
         run: yarn test:unit run --bail 1
 
       - name: Build
-        run: yarn build --outDir _site
+        run: yarn build --outDir
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
