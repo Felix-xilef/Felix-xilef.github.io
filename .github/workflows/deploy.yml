@@ -34,7 +34,8 @@ jobs:
         run: yarn test:unit run --bail 1
 
       - name: Build
-        run: yarn build
+        run: yarn build |
+          cp _site/index.html _site/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
