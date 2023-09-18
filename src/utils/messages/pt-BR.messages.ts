@@ -81,7 +81,7 @@ export default new AppMessages({
               description: 'Ao final do estágio, fui contratado como assitente. Sendo responsável, principalmente, pelo desenvolvimento e manutenção de um sistema de controle de insumos e um sistema de controle de horário com foto e geolocalização. Usando Angular, Vue e NestJS com TypeORM.',
             },
             {
-              positionName: 'Desenvolvedor de Sistemas Júnior',
+              positionName: 'Desenvolvedor de Sistemas Júnior III',
               startDate: 'Ago. de 2022',
               endDate: 'Hoje',
               current: 'Posição Atual',

@@ -13,6 +13,10 @@ export default createRouter({
       component: () => import('../views/HomeView.vue'),
     },
     {
+      path: '/favicon.svg',
+      component: () => import('../../public/favicon.svg'),
+    },
+    {
       path: '/:anything*',
       redirect: {
         name: RouteName.HOME,
