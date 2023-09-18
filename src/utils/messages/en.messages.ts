@@ -81,7 +81,7 @@ export default new AppMessages({
               description: 'At the end of the internship, I was hired as an assistant, primarily responsible for the development and maintenance of an input control system and a time tracking system with photo and geolocation features. I used Angular, Vue, and NestJS with TypeORM for these tasks.',
             },
             {
-              positionName: 'Junior Systems Developer',
+              positionName: 'Junior Systems Developer III',
               startDate: 'Aug. 2022',
               endDate: 'Present',
               current: 'Current Position',
