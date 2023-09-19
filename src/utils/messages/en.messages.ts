@@ -99,6 +99,10 @@ export default new AppMessages({
     },
   },
 
+  curriculum: {
+    superiorCourse: 'System Analysis and Development',
+  },
+
   footer: {
     linkLabel: 'link',
     emailLabel: 'e-mail',

@@ -4,6 +4,7 @@ import { useGithubUrl } from '@/composables/url/github-url.composable';
 import { useLinkedinUrl } from '@/composables/url/linkedin-url.composable';
 import { useWhatsappUrl } from '@/composables/url/whatsapp-url.composable';
 import { useMessageStore } from '@/stores/message.store';
+import { BrandStyle } from '@/utils/enums/brand-color.enum';
 import { computed } from 'vue';
 import AppFooterContactInfo from './AppFooterContactInfo.vue';
 
@@ -25,8 +26,8 @@ const messages = computed(
     >
       <v-col cols="auto">
         <AppFooterContactInfo
-          icon="$mdi-github"
-          icon-color="#f5f5f5"
+          :icon="BrandStyle.GITHUB.icon"
+          :icon-color="BrandStyle.GITHUB.color"
           :label="messages.linkLabel"
           :text="GITHUB_USERNAME"
           :href="useGithubUrl()"
@@ -36,8 +37,8 @@ const messages = computed(
 
       <v-col cols="auto">
         <AppFooterContactInfo
-          icon="$mdi-linkedin"
-          icon-color="#0077b5"
+          :icon="BrandStyle.LINKEDIN.icon"
+          :icon-color="BrandStyle.LINKEDIN.color"
           :label="messages.linkLabel"
           :text="LINKEDIN_USERNAME"
           :href="useLinkedinUrl()"
@@ -58,8 +59,8 @@ const messages = computed(
 
       <v-col cols="auto">
         <AppFooterContactInfo
-          icon="$mdi-whatsapp"
-          icon-color="#25D366"
+          :icon="BrandStyle.WHATSAPP.icon"
+          :icon-color="BrandStyle.WHATSAPP.color"
           :label="messages.phoneLabel"
           :text="PHONE"
           :href="useWhatsappUrl()"

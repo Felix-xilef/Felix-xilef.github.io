@@ -93,6 +93,10 @@ export interface AppMessages {
     };
   };
 
+  curriculum: {
+    superiorCourse: string;
+  };
+
   footer: {
     linkLabel: string;
     emailLabel: string;
