@@ -21,7 +21,7 @@ const messages = computed(
   <v-sheet
     height="297mm"
     width="210mm"
-    color="#fff"
+    color="background"
     theme="sheet"
   >
     <v-row>
@@ -53,7 +53,9 @@ const messages = computed(
                 ></v-icon>
               </template>
 
-              {{ GITHUB_USERNAME }}
+              <span class="contact-info-text">
+                {{ GITHUB_USERNAME }}
+              </span>
             </v-btn>
           </v-col>
 
@@ -73,7 +75,9 @@ const messages = computed(
                 ></v-icon>
               </template>
 
-              {{ PHONE }}
+              <span class="contact-info-text">
+                {{ PHONE }}
+              </span>
             </v-btn>
           </v-col>
 
@@ -93,7 +97,9 @@ const messages = computed(
                 ></v-icon>
               </template>
 
-              {{ LINKEDIN_USERNAME }}
+              <span class="contact-info-text">
+                {{ LINKEDIN_USERNAME }}
+              </span>
             </v-btn>
           </v-col>
 
@@ -113,7 +119,9 @@ const messages = computed(
                 ></v-icon>
               </template>
 
-              {{ EMAIL }}
+              <span class="contact-info-text">
+                {{ EMAIL }}
+              </span>
             </v-btn>
           </v-col>
         </v-row>
@@ -123,4 +131,27 @@ const messages = computed(
 </template>
 
 <style scoped lang="scss">
+@use '@/assets/styles/mixins.scss';
+
+.v-sheet {
+  font-size: 10pt;
+
+  * {
+    @include mixins.font-family-open-sans;
+  }
+
+  h1 {
+    font-size: 36pt;
+  }
+
+  h3,
+  h4 {
+    font-size: 12pt;
+  }
+
+  .contact-info-text {
+    font-size: 10.5pt;
+    text-transform: none;
+  }
+}
 </style>
