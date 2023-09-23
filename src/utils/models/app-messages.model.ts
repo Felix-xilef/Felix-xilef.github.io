@@ -1,3 +1,5 @@
+import type { BrandStyle } from "../enums/brand-color.enum";
+
 type ProfessionalExperienceItem<T extends ChangeOfPosition<any>[] | undefined = undefined> = {
   title: string;
   enterprise: string;
@@ -48,6 +50,7 @@ export interface AppMessages {
       college: {
         title: string;
         course: string;
+        institution: string;
         graduation: string;
       };
 
@@ -94,7 +97,51 @@ export interface AppMessages {
   };
 
   curriculum: {
-    superiorCourse: string;
+    sheet: {
+      head: {
+        headingSubtitle: string;
+      };
+      body: {
+        presentation: {
+          title: string;
+          description: string;
+        };
+        college: {
+          title: string;
+          course: string;
+          graduation: string;
+        };
+        coursesAndCertifications: {
+          title: string;
+          items: {
+            title: string;
+            conclusion: string;
+          }[];
+        };
+        experiences: {
+          title: string;
+          items: {
+            title: string;
+            description: string;
+            mainTechnologies?: ValueOf<typeof BrandStyle>[];
+          }[];
+        };
+        mainTechnologies: {
+          title: string;
+        };
+        languages: {
+          title: string;
+          items: string[];
+        };
+        contactInformation: {
+          title: string;
+          email: string;
+          phone: string;
+          portfolioDescription: string;
+          portfolioQrCodeAlt: string;
+        };
+      };
+    };
   };
 
   footer: {

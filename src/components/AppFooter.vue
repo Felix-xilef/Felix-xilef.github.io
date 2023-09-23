@@ -27,7 +27,6 @@ const messages = computed(
       <v-col cols="auto">
         <AppFooterContactInfo
           :icon="BrandStyle.GITHUB.icon"
-          :icon-color="BrandStyle.GITHUB.color"
           :label="messages.linkLabel"
           :text="GITHUB_USERNAME"
           :href="useGithubUrl()"
