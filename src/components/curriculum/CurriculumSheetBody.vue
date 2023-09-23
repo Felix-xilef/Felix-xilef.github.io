@@ -177,6 +177,7 @@ function getFormattedUrl(url: string) {
             <v-img
               src="@/assets/images/portfolio-qrcode.png"
               :alt="messages.contactInformation.portfolioQrCodeAlt"
+              eager
             ></v-img>
 
             <figcaption>

@@ -142,6 +142,8 @@ export interface AppMessages {
         };
       };
     };
+    downloadButtonLabel: string;
+    printButtonLabel: string;
   };
 
   footer: {

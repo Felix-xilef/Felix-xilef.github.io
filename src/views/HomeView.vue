@@ -27,13 +27,19 @@ import ProfessionalExperience from '@/components/home/ProfessionalExperience.vue
 
 <style scoped lang="scss">
 .home-view-wrapper {
+  --component-padding: 18vh;
+  --component-gaps: 30vh;
+
+  @media (max-width: 960px) {
+    --component-padding: 7vh;
+    --component-gaps: 20vh;
+  }
+
   display: flex;
   flex-direction: column;
 
-  gap: 30vh;
-
-  @media (max-width: 960px) {
-    gap: 20vh;
-  }
+  padding-top: var(--component-padding);
+  padding-bottom: var(--component-padding);
+  gap: var(--component-gaps);
 }
 </style>

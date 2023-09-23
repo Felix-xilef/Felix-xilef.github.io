@@ -23,12 +23,11 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-.v-main,
-.app-footer {
-  margin-top: 30vh;
+.v-main {
+  margin-top: calc(68px + 1rem);
+}
 
-  @media (max-width: 960px) {
-    margin-top: 20vh;
-  }
+.app-footer {
+  margin-top: 1rem;
 }
 </style>

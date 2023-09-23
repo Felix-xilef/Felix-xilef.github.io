@@ -185,6 +185,8 @@ export default new AppMessages({
         },
       },
     },
+    downloadButtonLabel: 'Baixar Currículo',
+    printButtonLabel: 'Imprimir Currículo',
   },
 
   footer: {
