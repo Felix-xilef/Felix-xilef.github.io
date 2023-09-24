@@ -2,6 +2,7 @@
 import { useGithubUrl } from '@/composables/url/github-url.composable';
 import { useLinkedinUrl } from '@/composables/url/linkedin-url.composable';
 import { useMessageStore } from '@/stores/message.store';
+import { BrandStyle } from '@/utils/enums/brand-color.enum';
 import { computed } from 'vue';
 
 const messages = computed(
@@ -33,7 +34,7 @@ const messages = computed(
 
         <div class="social-links">
           <v-btn
-            icon="$mdi-github"
+            :icon="BrandStyle.GITHUB.icon"
             variant="text"
             density="compact"
             size="x-large"
@@ -42,7 +43,7 @@ const messages = computed(
           ></v-btn>
 
           <v-btn
-            icon="$mdi-linkedin"
+            :icon="BrandStyle.LINKEDIN.icon"
             variant="text"
             density="compact"
             size="x-large"

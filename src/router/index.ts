@@ -13,6 +13,11 @@ export default createRouter({
       component: () => import('../views/HomeView.vue'),
     },
     {
+      path: '/curriculum',
+      name: RouteName.CURRICULUM,
+      component: () => import('../views/CurriculumView.vue'),
+    },
+    {
       path: '/favicon.svg',
       component: () => import('../../public/favicon.svg'),
     },

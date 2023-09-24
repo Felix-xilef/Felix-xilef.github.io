@@ -22,7 +22,7 @@ const messages = computed(
             :items="[
               {
                 name: messages.college.course,
-                description: 'Fatec São Caetano do Sul - Antônio Russo',
+                description: messages.college.institution,
                 conclusionText: messages.college.graduation,
               },
             ]"

@@ -1,6 +1,24 @@
 <script setup lang="ts">
+import { useCurriculumUrl } from '@/composables/url/curriculum-url.composable';
+import router from '@/router';
+import { RouteName } from '@/router/route-name.enum';
+import { useMessageStore } from '@/stores/message.store';
+import { computed } from 'vue';
+import { useDisplay } from 'vuetify';
 import AppLogo from './AppLogo.vue';
 import LanguageSelect from './LanguageSelect.vue';
+
+const messages = computed(
+  () => useMessageStore().messages.appBar,
+);
+
+const currentRoute = computed(
+  () => router.currentRoute.value.name,
+);
+
+function goBack() {
+  router.back();
+}
 </script>
 
 <template>
@@ -15,14 +33,47 @@ import LanguageSelect from './LanguageSelect.vue';
       no-gutters
     >
       <v-col cols="auto">
-        <AppLogo height="1.75rem"/>
+        <router-link :to="{ name: RouteName.HOME }">
+          <AppLogo height="1.75rem"/>
+        </router-link>
       </v-col>
 
       <v-spacer></v-spacer>
 
-      <v-col cols="auto">
-        <LanguageSelect />
-      </v-col>
+      <template v-if="!useDisplay().xs.value">
+        <v-col cols="auto">
+          <v-scroll-x-transition mode="out-in">
+            <v-btn
+              v-if="currentRoute !== RouteName.HOME"
+              prepend-icon="$mdi-arrow-left"
+              :text="messages.backBtnLabel"
+              @click="goBack()"
+              variant="text"
+            ></v-btn>
+            <v-btn
+              v-else
+              prepend-icon="$mdi-file-document"
+              :text="messages.curriculumBtnLabel"
+              variant="text"
+              v-bind="
+                useDisplay().mdAndUp.value ?
+                  {
+                    to: { name: RouteName.CURRICULUM },
+                  } :
+                {
+                  href: useCurriculumUrl(),
+                  target: '_blank',
+                  download: '',
+                }
+              "
+            ></v-btn>
+          </v-scroll-x-transition>
+        </v-col>
+
+        <v-col cols="auto">
+          <LanguageSelect />
+        </v-col>
+      </template>
     </v-row>
   </v-app-bar>
 </template>
@@ -48,6 +99,8 @@ import LanguageSelect from './LanguageSelect.vue';
 
   .v-row {
     padding: .5rem;
+
+    gap: .5rem;
   }
 }
 </style>

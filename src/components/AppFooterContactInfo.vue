@@ -3,7 +3,7 @@ import CopyToClipboardButton from './utils/CopyToClipboardButton.vue';
 
 const props = defineProps<{
   icon: string;
-  iconColor: string;
+  iconColor?: string;
   label: string;
   text: string;
   href: string;

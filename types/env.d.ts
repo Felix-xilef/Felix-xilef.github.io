@@ -1,13 +1,15 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  GITHUB_USERNAME: string;
+  readonly VITE_GITHUB_USERNAME: string;
 
-  LINKEDIN_USERNAME: string;
+  readonly VITE_LINKEDIN_USERNAME: string;
 
-  EMAIL: string;
+  readonly VITE_EMAIL: string;
 
-  PHONE: string;
+  readonly VITE_PHONE: string;
+
+  readonly VITE_PORTFOLIO_LINK: string;
 }
 
 interface ImportMeta {
