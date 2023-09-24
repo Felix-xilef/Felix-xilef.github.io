@@ -1,7 +1,10 @@
+import { BrandStyle } from "../enums/brand-color.enum";
 import { AppMessages } from "../models/app-messages.model";
 
 export default new AppMessages({
   appBar: {
+    backBtnLabel: 'Voltar',
+    curriculumBtnLabel: 'Currículo',
     language: 'Idioma',
   },
 
@@ -17,6 +20,7 @@ export default new AppMessages({
       college: {
         title: 'Ensino Superior',
         course: 'Análise e Desenvolvimento de Sistemas',
+        institution: 'Fatec São Caetano do Sul - Antônio Russo',
         graduation: 'Graduado em Dez. de 2021',
       },
 
@@ -97,6 +101,95 @@ export default new AppMessages({
       moreKnowledgebleBoxTitle: 'Tenho mais experiência e conhecimento',
       lessKnowledgebleBoxTitle: 'Uso com menos frequência ou tenho menos conhecimento',
     },
+  },
+
+  curriculum: {
+    filename: 'CV_Felix-Petiz-Bonilho',
+    sheet: {
+      head: {
+        headingSubtitle: 'Análise e Desenvolvimento de Sistemas - Fatec São Caetano do Sul',
+      },
+      body: {
+        presentation: {
+          title: 'Apresentação',
+          description: 'Olá, me chamo Felix e sou um desenvolvedor de sistemas em busca de novas experiências. Tenho conhecimento, principalmente, em desenvolvimento FullStack com tecnologias modernas como Vue, Angular, NestJS e TypeORM.',
+        },
+        college: {
+          title: 'Formação Superior',
+          course: 'Análise e Desenvolvimento de Sistemas - Fatec São Caetano do Sul',
+          graduation: 'Graduado em Dez. de 2021',
+        },
+        coursesAndCertifications: {
+          title: 'Cursos e Certificações',
+          items: [
+            {
+              title: 'Curso Linux Essentials - CISCO',
+              conclusion: 'Concluído em Dez. de 2020',
+            },
+            {
+              title: 'Certificação em Teste de Software CTFL - ISTQB',
+              conclusion: 'Concluída em Maio de 2019',
+            },
+          ],
+        },
+        experiences: {
+          title: 'Experiências',
+          items: [
+            {
+              title: 'Estágio em desenvolvimento de sistemas - Smart Staff',
+              description: 'Em Maio de 2021, comecei a atuar como estagiário. Trabalhei criando novos sistemas e funcionalidades, assim como dando manutenção aos já existentes.',
+              mainTechnologies: [
+                BrandStyle.VUE,
+                BrandStyle.ANGULAR,
+                BrandStyle.NESTJS,
+                BrandStyle.JAVA,
+              ],
+            },
+            {
+              title: 'Assistente de Desenvolvimento - Smart Staff',
+              description: 'Em Março de 2022, fui contratado como assitente. Sendo responsável, principalmente, pelo desenvolvimento e manutenção de um sistema de controle de insumos e um sistema de controle de horário com foto e geolocalização.',
+              mainTechnologies: [
+                BrandStyle.VUE,
+                BrandStyle.ANGULAR,
+                BrandStyle.NESTJS,
+                BrandStyle.TYPEORM,
+              ],
+            },
+            {
+              title: 'Desenvolvedor de Sistemas Júnior III - Smart Staff',
+              description: 'Desde Agosto de 2022, atuo como desenvolvedor de sistemas júnior. Continuo trabalhando na maior parte do tempo com os mesmos sistemas, porém também participo das novas solução desenvolvidas pela equipe.',
+              mainTechnologies: [
+                BrandStyle.VUE,
+                BrandStyle.VUETIFY,
+                BrandStyle.ANGULAR,
+                BrandStyle.NESTJS,
+              ],
+            },
+          ],
+        },
+        mainTechnologies: {
+          title: 'Principais Tecnologias',
+        },
+        languages: {
+          title: 'Idiomas',
+          items: [
+            'Português - Nativo',
+            'Inglês - Avançado',
+            'Espanhol - Avançado',
+            'Japonês - Básico',
+          ],
+        },
+        contactInformation: {
+          title: 'Contato',
+          email: 'E-mail',
+          phone: 'Telefone',
+          portfolioDescription: 'Para saber mais sobre mim, acesse:',
+          portfolioQrCodeAlt: 'QrCode do link',
+        },
+      },
+    },
+    downloadButtonLabel: 'Baixar Currículo',
+    printButtonLabel: 'Imprimir Currículo',
   },
 
   footer: {

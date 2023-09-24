@@ -4,6 +4,8 @@ import { RouterView } from 'vue-router';
 import AppBar from './components/AppBar.vue';
 import AppFooter from './components/AppFooter.vue';
 import { useScrollbarStyleOnScroll } from './composables/style/scrollbar-style-on-scroll.composable';
+import AppBottomNavigation from './components/AppBottomNavigation.vue';
+import { useDisplay } from 'vuetify';
 
 onMounted(() => {
   useScrollbarStyleOnScroll();
@@ -18,17 +20,20 @@ onMounted(() => {
       <RouterView />
     </v-main>
 
+    <AppBottomNavigation v-if="useDisplay().xs.value"/>
+
     <AppFooter class="app-footer"/>
   </v-app>
 </template>
 
 <style scoped lang="scss">
-.v-main,
-.app-footer {
-  margin-top: 30vh;
+.v-main {
+  margin-top: calc(68px + 1rem);
+}
 
-  @media (max-width: 960px) {
-    margin-top: 20vh;
+@media (min-width: 600px) {
+  .app-footer {
+    margin-top: 1rem;
   }
 }
 </style>
