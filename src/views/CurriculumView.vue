@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import CurriculumSheet from '@/components/curriculum/CurriculumSheet.vue';
+import { useCurriculumUrl } from '@/composables/url/curriculum-url.composable';
 import { useMessageStore } from '@/stores/message.store';
 import { computed } from 'vue';
 
 const messages = computed(
   () => useMessageStore().messages.curriculum,
-);
-
-const currentLanguage = computed(
-  () => useMessageStore().currentLanguage,
 );
 
 function printCurriculumSheet() {
@@ -26,7 +23,7 @@ function printCurriculumSheet() {
         size="x-large"
         color="info"
         variant="elevated"
-        :href="`curriculums/CV_Felix-Petiz-Bonilho_${currentLanguage}.pdf`"
+        :href="useCurriculumUrl()"
         target="_blank"
         :aria-label="messages.downloadButtonLabel"
         download

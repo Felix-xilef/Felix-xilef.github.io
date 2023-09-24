@@ -35,6 +35,8 @@ type ChangeOfPosition<EndDateType extends string | undefined = undefined> = {
 
 export interface AppMessages {
   appBar: {
+    backBtnLabel: string;
+    curriculumBtnLabel: string;
     language: string;
   };
 
@@ -97,6 +99,7 @@ export interface AppMessages {
   };
 
   curriculum: {
+    filename: string;
     sheet: {
       head: {
         headingSubtitle: string;

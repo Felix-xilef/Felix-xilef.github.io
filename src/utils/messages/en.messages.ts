@@ -3,6 +3,8 @@ import { AppMessages } from "../models/app-messages.model";
 
 export default new AppMessages({
   appBar: {
+    backBtnLabel: 'Go Back',
+    curriculumBtnLabel: 'Curriculum',
     language: 'Language',
   },
 
@@ -102,6 +104,7 @@ export default new AppMessages({
   },
 
   curriculum: {
+    filename: 'CV_Felix-Petiz-Bonilho',
     sheet: {
       head: {
         headingSubtitle: 'System Analysis and Development - Fatec São Caetano do Sul',
