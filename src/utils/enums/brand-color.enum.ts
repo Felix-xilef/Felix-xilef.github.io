@@ -81,7 +81,7 @@ export const BrandStyle = {
   },
   ANDROID_STUDIO: {
     name: 'Android Studio',
-    icon: '$mdi-android',
+    icon: 'custom:android',
     color: '#3ddc84',
   },
   C: {
@@ -93,6 +93,16 @@ export const BrandStyle = {
     name: 'C++',
     icon: '$mdi-language-cpp',
     color: '#00579E',
+  },
+  CSHARP: {
+    name: 'C#',
+    icon: '$mdi-language-csharp',
+    color: '#00579E',
+  },
+  UNITY: {
+    name: 'Unity',
+    icon: '$mdi-unity',
+    color: 'currentColor',
   },
   GITHUB: {
     name: 'GitHub',

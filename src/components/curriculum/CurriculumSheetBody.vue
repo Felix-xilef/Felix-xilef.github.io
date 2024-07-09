@@ -10,15 +10,14 @@ const PHONE = import.meta.env.VITE_PHONE;
 const PORTFOLIO_LINK = import.meta.env.VITE_PORTFOLIO_LINK;
 
 const moreKnowledgebleItems = [
-  BrandStyle.VUE,
-  BrandStyle.VUETIFY,
-  BrandStyle.ANGULAR,
-  BrandStyle.BOOTSTRAP,
-  BrandStyle.NESTJS,
-  BrandStyle.TYPEORM,
+  BrandStyle.CSHARP,
+  BrandStyle.PYTHON,
+  BrandStyle.JAVASCRIPT,
+  BrandStyle.CPP,
+  BrandStyle.UNITY,
+  BrandStyle.NODEJS,
   BrandStyle.SQL,
   BrandStyle.DOCKER,
-  BrandStyle.PYTHON,
 ];
 
 const messages = computed(
@@ -64,6 +63,20 @@ function getFormattedUrl(url: string) {
 
         <span>
           {{ messages.college.graduation }}
+        </span>
+      </div>
+
+      <div>
+        <h3>
+          {{ messages.postDegree.title }}
+        </h3>
+
+        <h4>
+          {{ messages.postDegree.course }}
+        </h4>
+
+        <span>
+          {{ messages.postDegree.graduation }}
         </span>
       </div>
 

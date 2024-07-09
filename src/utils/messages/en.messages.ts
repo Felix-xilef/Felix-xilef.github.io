@@ -11,7 +11,7 @@ export default new AppMessages({
   home: {
     presentation: {
       title: 'Hello, I am Felix!',
-      description: 'I hold a degree in System Analysis and Development from Fatec São Caetano do Sul, and currently, I am immersed in the world of FullStack development.',
+      description: 'I graduated in System Analysis and Development at Fatec São Caetano do Sul and completed post-graduation in Game Development at Unopar. I have about 2 and a half years of experience working with FullStack development and, currently, I\'m looking for an oportunity in the gaming industry.',
 
       profilePictureAlt: 'Profile Photo',
     },
@@ -22,6 +22,13 @@ export default new AppMessages({
         course: 'System Analysis and Development',
         institution: 'Fatec São Caetano do Sul - Antônio Russo',
         graduation: 'Graduated in Dec. 2021',
+      },
+
+      postDegree: {
+        title: 'Specialization',
+        course: 'Game Development',
+        institution: 'Unopar',
+        graduation: 'Completed in July 2024',
       },
 
       coursesAndCertifications: {
@@ -87,9 +94,8 @@ export default new AppMessages({
             {
               positionName: 'Junior Systems Developer III',
               startDate: 'Aug. 2022',
-              endDate: 'Present',
-              current: 'Current Position',
-              description: 'I currently work as a Junior Systems Developer. Most of the time, I still work on the same systems, but I also participate in the development of new solutions created by the team.',
+              endDate: 'Dec. 2023',
+              description: 'I was promoted to Junior Systems Developer. Most of the time, I still worked on the same systems, but I also participated in the development of new solutions created by the team.',
             },
           ],
         },
@@ -98,8 +104,8 @@ export default new AppMessages({
 
     knowledge: {
       title: 'Knowledge & Skills',
-      moreKnowledgebleBoxTitle: 'I have more experience and knowledge',
-      lessKnowledgebleBoxTitle: 'I use less often or have less knowledge',
+      languages: 'Languages',
+      others: 'Frameworks, Engines and others',
     },
   },
 
@@ -112,12 +118,17 @@ export default new AppMessages({
       body: {
         presentation: {
           title: 'Introduction',
-          description: 'Hello, my name is Felix and I am a systems developer in search of new experiences. I have knowledge, mainly, in FullStack development with modern technologies such as Vue, Angular, NestJS e TypeORM.',
+          description: 'Hello, my name is Felix, I have about 2 and a half years of experience working with FullStack development and, after completing an specialization in Game Development, I\'m looking for and oportunity in the gaming industry. Currently, I have experience with Unity and C#',
         },
         college: {
           title: 'Higher Education',
           course: 'System Analysis and Development - Fatec São Caetano do Sul',
           graduation: 'Graduated in Dec. 2021',
+        },
+        postDegree: {
+          title: 'Specialization',
+          course: 'Game Development - Unopar',
+          graduation: 'Completed in July 2024',
         },
         coursesAndCertifications: {
           title: 'Courses and Certifications',
@@ -157,7 +168,7 @@ export default new AppMessages({
             },
             {
               title: 'Junior Systems Developer III - Smart Staff',
-              description: 'Since August 2022, I have been working as a junior systems developer. Most of the time, I still work on the same systems, but I also participate in the development of new solutions created by the team.',
+              description: 'From August 2022 until December 2023, I worked as a junior systems developer. Most of the time, I still worked on the same systems, but I also participated in the development of new solutions created by the team.',
               mainTechnologies: [
                 BrandStyle.VUE,
                 BrandStyle.VUETIFY,

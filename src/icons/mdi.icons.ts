@@ -1,4 +1,4 @@
-import { mdiAndroid, mdiArrowLeft, mdiCalendarRange, mdiCertificate, mdiCheck, mdiContentCopy, mdiDatabase, mdiDownload, mdiEmail, mdiFileDocument, mdiGithub, mdiLanguageC, mdiLanguageCpp, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageTypescript, mdiLinkedin, mdiOfficeBuildingMarker, mdiPrinter, mdiSchool, mdiTranslateVariant, mdiWhatsapp } from "@mdi/js";
+import { mdiAndroid, mdiArrowLeft, mdiCalendarRange, mdiCertificate, mdiCheck, mdiContentCopy, mdiDatabase, mdiDownload, mdiEmail, mdiFileDocument, mdiGithub, mdiLanguageC, mdiLanguageCpp, mdiLanguageCsharp, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageTypescript, mdiLinkedin, mdiOfficeBuildingMarker, mdiPrinter, mdiSchool, mdiTranslateVariant, mdiUnity, mdiWhatsapp } from "@mdi/js";
 import type { IconAliases } from "vuetify";
 import { aliases } from "vuetify/iconsets/mdi-svg";
 
@@ -17,6 +17,7 @@ export const mdiAliases: Partial<IconAliases> = {
   'mdi-github': mdiGithub,
   'mdi-language-c': mdiLanguageC,
   'mdi-language-cpp': mdiLanguageCpp,
+  'mdi-language-csharp': mdiLanguageCsharp,
   'mdi-language-css3': mdiLanguageCss3,
   'mdi-language-html5': mdiLanguageHtml5,
   'mdi-language-javascript': mdiLanguageJavascript,
@@ -27,4 +28,5 @@ export const mdiAliases: Partial<IconAliases> = {
   'mdi-school': mdiSchool,
   'mdi-translate-variant': mdiTranslateVariant,
   'mdi-whatsapp': mdiWhatsapp,
+  'mdi-unity': mdiUnity,
 };
