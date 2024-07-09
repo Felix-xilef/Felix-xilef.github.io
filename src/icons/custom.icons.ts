@@ -3,6 +3,7 @@ import bootstrap from "@/assets/images/icons/bootstrap.svg";
 import cCpp from "@/assets/images/icons/c-cpp.svg";
 import docker from "@/assets/images/icons/docker.svg";
 import flutter from "@/assets/images/icons/flutter.svg";
+import android from "@/assets/images/icons/android.svg";
 import java from "@/assets/images/icons/java.png";
 import nestjs from "@/assets/images/icons/nestjs.svg";
 import nodejs from "@/assets/images/icons/nodejs.svg";
@@ -21,6 +22,7 @@ export const customAliases: Record<string, string> = {
   'c-cpp': cCpp,
   docker,
   flutter,
+  android,
   java,
   nestjs,
   nodejs,

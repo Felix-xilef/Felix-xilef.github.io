@@ -29,6 +29,20 @@ const messages = computed(
           />
         </v-col>
 
+        <v-col cols="12">
+          <EducationCard
+            icon="$mdi-school"
+            :title="messages.postDegree.title"
+            :items="[
+              {
+                name: messages.postDegree.course,
+                description: messages.postDegree.institution,
+                conclusionText: messages.postDegree.graduation,
+              },
+            ]"
+          />
+        </v-col>
+
         <v-col>
           <EducationCard
             icon="$mdi-certificate"

@@ -11,7 +11,7 @@ export default new AppMessages({
   home: {
     presentation: {
       title: 'Olá, eu sou Felix!',
-      description: 'Sou graduado em Análise e Desenvolvimento de Sistemas pela Fatec São Caetano do Sul e, atualmente, estou mergulhado no mundo do desenvolvimento FullStack.',
+      description: 'Sou graduado em Análise e Desenvolvimento de Sistemas pela Fatec São Caetano do Sul e pós-graduado em Desenvolvimento de Games pela Unopar. Possuo 2 anos e meio de experiência trabalhando com desenvolvimento FullStack e, atualmente, busco uma oportunidade na área de jogos.',
 
       profilePictureAlt: 'Foto de perfil',
     },
@@ -22,6 +22,13 @@ export default new AppMessages({
         course: 'Análise e Desenvolvimento de Sistemas',
         institution: 'Fatec São Caetano do Sul - Antônio Russo',
         graduation: 'Graduado em Dez. de 2021',
+      },
+
+      postDegree: {
+        title: 'Especialização',
+        course: 'Desenvolvimento de Games',
+        institution: 'Unopar',
+        graduation: 'Concluída em Jul. de 2024',
       },
 
       coursesAndCertifications: {
@@ -87,9 +94,8 @@ export default new AppMessages({
             {
               positionName: 'Desenvolvedor de Sistemas Júnior III',
               startDate: 'Ago. de 2022',
-              endDate: 'Hoje',
-              current: 'Posição Atual',
-              description: 'Atualmente atuo como desenvolvedor de sistemas júnior. Continuo trabalhando na maior parte do tempo com os mesmos sistemas, porém também participo das novas solução desenvolvidas pela equipe.',
+              endDate: 'Dez. de 2023',
+              description: 'Passei a atuar como desenvolvedor de sistemas júnior. Continuei trabalhando na maior parte do tempo com os mesmos sistemas, porém também participei das novas soluções desenvolvidas pela equipe.',
             },
           ],
         },
@@ -98,8 +104,8 @@ export default new AppMessages({
 
     knowledge: {
       title: 'Conhecimentos',
-      moreKnowledgebleBoxTitle: 'Tenho mais experiência e conhecimento',
-      lessKnowledgebleBoxTitle: 'Uso com menos frequência ou tenho menos conhecimento',
+      languages: 'Linguagens',
+      others: 'Frameworks, Engines e outros',
     },
   },
 
@@ -112,12 +118,17 @@ export default new AppMessages({
       body: {
         presentation: {
           title: 'Apresentação',
-          description: 'Olá, me chamo Felix e sou um desenvolvedor de sistemas em busca de novas experiências. Tenho conhecimento, principalmente, em desenvolvimento FullStack com tecnologias modernas como Vue, Angular, NestJS e TypeORM.',
+          description: 'Olá, me chamo Felix, tenho 2 anos e meio de experiencia como desenvolvedor Fullstack e, após terminar uma especialização em Desenvolvimento de Games, estou buscando uma oportunidade na área de jogos. Atualmente tenho experiência com Unity e C#',
         },
         college: {
           title: 'Formação Superior',
           course: 'Análise e Desenvolvimento de Sistemas - Fatec São Caetano do Sul',
           graduation: 'Graduado em Dez. de 2021',
+        },
+        postDegree: {
+          title: 'Especialização',
+          course: 'Desenvolvimento de Games - Unopar',
+          graduation: 'Concluída em Jul. de 2024',
         },
         coursesAndCertifications: {
           title: 'Cursos e Certificações',
@@ -157,7 +168,7 @@ export default new AppMessages({
             },
             {
               title: 'Desenvolvedor de Sistemas Júnior III - Smart Staff',
-              description: 'Desde Agosto de 2022, atuo como desenvolvedor de sistemas júnior. Continuo trabalhando na maior parte do tempo com os mesmos sistemas, porém também participo das novas solução desenvolvidas pela equipe.',
+              description: 'De Agosto de 2022 até Dezembro de 2023, atuei como desenvolvedor de sistemas júnior. Trabalhando, na maior parte do tempo, com os mesmos sistemas, porém também participando das novas solução desenvolvidas pela equipe.',
               mainTechnologies: [
                 BrandStyle.VUE,
                 BrandStyle.VUETIFY,

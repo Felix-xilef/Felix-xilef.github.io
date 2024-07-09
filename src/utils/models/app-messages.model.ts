@@ -17,7 +17,7 @@ type ProfessionalExperienceItem<T extends ChangeOfPosition<any>[] | undefined = 
   }
 );
 
-type ChangeOfPosition<EndDateType extends string | undefined = undefined> = {
+type ChangeOfPosition<EndDateType extends string | any = any> = {
   positionName: string;
   startDate: string;
   description: string;
@@ -56,6 +56,13 @@ export interface AppMessages {
         graduation: string;
       };
 
+      postDegree: {
+        title: string;
+        course: string;
+        institution: string;
+        graduation: string;
+      };
+
       coursesAndCertifications: {
         title: string;
         items: Record<
@@ -86,15 +93,15 @@ export interface AppMessages {
         ProfessionalExperienceItem,
         ProfessionalExperienceItem<[
           ChangeOfPosition,
-          ChangeOfPosition<string>,
+          ChangeOfPosition,
         ]>,
       ];
     };
 
     knowledge: {
       title: string;
-      moreKnowledgebleBoxTitle: string;
-      lessKnowledgebleBoxTitle: string;
+      languages: string;
+      others: string;
     };
   };
 
@@ -110,6 +117,11 @@ export interface AppMessages {
           description: string;
         };
         college: {
+          title: string;
+          course: string;
+          graduation: string;
+        };
+        postDegree: {
           title: string;
           course: string;
           graduation: string;

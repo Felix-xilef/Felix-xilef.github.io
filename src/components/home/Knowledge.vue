@@ -9,29 +9,26 @@ const messages = computed(
   () => useMessageStore().messages.home.knowledge,
 );
 
-const moreKnowledgebleItems: KnowledgeItem[] = [
-  BrandStyle.VUE,
-  BrandStyle.VUETIFY,
-  BrandStyle.ANGULAR,
-  BrandStyle.BOOTSTRAP,
-  BrandStyle.NESTJS,
-  BrandStyle.TYPEORM,
-  BrandStyle.SQL,
-  BrandStyle.DOCKER,
+const languages: KnowledgeItem[] = [
+  BrandStyle.CSHARP,
   BrandStyle.PYTHON,
-  BrandStyle.NODEJS,
-  BrandStyle.TYPESCRIPT,
   BrandStyle.JAVASCRIPT,
+  BrandStyle.TYPESCRIPT,
+  BrandStyle.CPP,
+  BrandStyle.C,
   BrandStyle.HTML5,
   BrandStyle.CSS3,
+  BrandStyle.JAVA,
 ];
 
-const lessKnowledgebleItems: KnowledgeItem[] = [
-  BrandStyle.JAVA,
+const others: KnowledgeItem[] = [
+  BrandStyle.UNITY,
+  BrandStyle.NODEJS,
+  BrandStyle.SQL,
   BrandStyle.FLUTTER,
-  BrandStyle.ANDROID_STUDIO,
-  BrandStyle.C,
-  BrandStyle.CPP,
+  BrandStyle.VUE,
+  BrandStyle.NESTJS,
+  BrandStyle.DOCKER,
 ];
 </script>
 
@@ -42,16 +39,16 @@ const lessKnowledgebleItems: KnowledgeItem[] = [
     </h1>
 
     <KnowledgeBox
-      :title="messages.moreKnowledgebleBoxTitle"
+      :title="messages.languages"
       color="heading-1"
-      :items="moreKnowledgebleItems"
+      :items="languages"
       class="knowledge-box"
     />
 
     <KnowledgeBox
-      :title="messages.lessKnowledgebleBoxTitle"
+      :title="messages.others"
       color="on-background"
-      :items="lessKnowledgebleItems"
+      :items="others"
       class="knowledge-box"
     />
   </div>
