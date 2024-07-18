@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useGithubUrl } from '@/composables/url/github-url.composable';
 import { useLinkedinUrl } from '@/composables/url/linkedin-url.composable';
+import { useUnityLearnUrl } from '@/composables/url/unity-learn-url.composable';
 import { useMessageStore } from '@/stores/message.store';
 import { BrandStyle } from '@/utils/enums/brand-color.enum';
 import { computed } from 'vue';
@@ -35,6 +36,7 @@ const messages = computed(
         <div class="social-links">
           <v-btn
             :icon="BrandStyle.GITHUB.icon"
+            :aria-label="BrandStyle.GITHUB.name"
             variant="text"
             density="compact"
             size="x-large"
@@ -44,10 +46,21 @@ const messages = computed(
 
           <v-btn
             :icon="BrandStyle.LINKEDIN.icon"
+            :aria-label="BrandStyle.LINKEDIN.name"
             variant="text"
             density="compact"
             size="x-large"
             :href="useLinkedinUrl()"
+            target="_blank"
+          ></v-btn>
+
+          <v-btn
+            :icon="BrandStyle.UNITY.icon"
+            :aria-label="`${BrandStyle.UNITY.name} learn`"
+            variant="text"
+            density="compact"
+            size="x-large"
+            :href="useUnityLearnUrl()"
             target="_blank"
           ></v-btn>
         </div>

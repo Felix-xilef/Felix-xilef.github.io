@@ -44,6 +44,11 @@ export default new AppMessages({
             institution: 'ISTQB',
             conclusion: 'Concluída em Maio de 2019',
           },
+          unityJuniorProgrammer: {
+            name: 'Unity Junior Programmer',
+            institution: 'Unity',
+            conclusion: 'Concluído em Jul. de 2024',
+          },
         },
       },
 
@@ -140,6 +145,10 @@ export default new AppMessages({
             {
               title: 'Certificação em Teste de Software CTFL - ISTQB',
               conclusion: 'Concluída em Maio de 2019',
+            },
+            {
+              title: 'Unity Junior Programmer',
+              conclusion: 'Concluído em Jul. de 2024',
             },
           ],
         },

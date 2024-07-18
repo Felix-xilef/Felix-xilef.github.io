@@ -5,6 +5,8 @@ interface ImportMetaEnv {
 
   readonly VITE_LINKEDIN_USERNAME: string;
 
+  readonly VITE_UNITY_LEARN_LINK: string;
+
   readonly VITE_EMAIL: string;
 
   readonly VITE_PHONE: string;
