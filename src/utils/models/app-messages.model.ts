@@ -66,7 +66,7 @@ export interface AppMessages {
       coursesAndCertifications: {
         title: string;
         items: Record<
-          'linuxEssentials' | 'ctfl',
+          'linuxEssentials' | 'ctfl' | 'unityJuniorProgrammer',
           {
             name: string;
             institution: string;

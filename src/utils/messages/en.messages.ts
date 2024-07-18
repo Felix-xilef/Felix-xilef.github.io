@@ -44,6 +44,11 @@ export default new AppMessages({
             institution: 'ISTQB',
             conclusion: 'Completed in May 2019',
           },
+          unityJuniorProgrammer: {
+            name: 'Unity Junior Programmer',
+            institution: 'Unity',
+            conclusion: 'Completed in Jul 2024',
+          },
         },
       },
 
@@ -140,6 +145,10 @@ export default new AppMessages({
             {
               title: 'Certified Tester Foundation Level (CTFL) - ISTQB',
               conclusion: 'Completed in May 2019',
+            },
+            {
+              title: 'Unity Junior Programmer',
+              conclusion: 'Completed in Jul 2024',
             },
           ],
         },
