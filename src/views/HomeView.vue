@@ -3,6 +3,7 @@ import Education from '@/components/home/Education.vue';
 import Knowledge from '@/components/home/Knowledge.vue';
 import Presentation from '@/components/home/Presentation.vue';
 import ProfessionalExperience from '@/components/home/ProfessionalExperience.vue';
+import Projects from '@/components/home/Projects.vue';
 </script>
 
 <template>
@@ -17,6 +18,10 @@ import ProfessionalExperience from '@/components/home/ProfessionalExperience.vue
 
     <section id="professional-experience">
       <ProfessionalExperience />
+    </section>
+
+    <section id="projects">
+      <Projects />
     </section>
 
     <section id="knowledge">
