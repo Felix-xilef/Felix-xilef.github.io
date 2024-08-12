@@ -98,6 +98,19 @@ export interface AppMessages {
       ];
     };
 
+    projects: {
+      title: string;
+      hiddenExploreButton: string;
+      smallerExploreButton: string;
+      items: Record<
+        'chessGame',
+        {
+          title: string;
+          description: string;
+        }
+      >;
+    };
+
     knowledge: {
       title: string;
       languages: string;

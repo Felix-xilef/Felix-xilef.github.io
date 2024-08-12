@@ -107,6 +107,18 @@ export default new AppMessages({
       ],
     },
 
+    projects: {
+      title: 'Projetos',
+      hiddenExploreButton: 'Conferir projeto',
+      smallerExploreButton: 'Conferir',
+      items: {
+        chessGame: {
+          title: 'Jogo de Xadrez',
+          description: 'Um jogo de xadrez para 2 jogadores local feito com Unity, localizado e interface feita com o UI Toolkit.',
+        },
+      },
+    },
+
     knowledge: {
       title: 'Conhecimentos',
       languages: 'Linguagens',

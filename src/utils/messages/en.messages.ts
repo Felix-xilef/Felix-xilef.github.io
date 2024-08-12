@@ -107,6 +107,18 @@ export default new AppMessages({
       ],
     },
 
+    projects: {
+      title: 'Projects',
+      hiddenExploreButton: 'Explore project',
+      smallerExploreButton: 'Explore',
+      items: {
+        chessGame: {
+          title: 'Chess Game',
+          description: 'A local multiplayer chess game made with Unity, localization and an interface built with UI Toolkit.',
+        },
+      },
+    },
+
     knowledge: {
       title: 'Knowledge & Skills',
       languages: 'Languages',
