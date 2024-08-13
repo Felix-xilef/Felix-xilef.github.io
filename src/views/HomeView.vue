@@ -12,20 +12,20 @@ import Projects from '@/components/home/Projects.vue';
       <Presentation />
     </section>
 
-    <section id="education">
-      <Education />
-    </section>
-
-    <section id="professional-experience">
-      <ProfessionalExperience />
-    </section>
-
     <section id="projects">
       <Projects />
     </section>
 
+    <section id="education">
+      <Education />
+    </section>
+
     <section id="knowledge">
       <Knowledge />
+    </section>
+
+    <section id="professional-experience">
+      <ProfessionalExperience />
     </section>
   </div>
 </template>

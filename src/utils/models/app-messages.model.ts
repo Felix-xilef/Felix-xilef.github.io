@@ -103,7 +103,7 @@ export interface AppMessages {
       hiddenExploreButton: string;
       smallerExploreButton: string;
       items: Record<
-        'chessGame',
+        'chessGame' | 'iconComponent',
         {
           title: string;
           description: string;

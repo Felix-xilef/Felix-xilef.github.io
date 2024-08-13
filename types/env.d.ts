@@ -15,6 +15,8 @@ interface ImportMetaEnv {
 
 
   readonly VITE_PROJECT_LINK_CHESS_GAME: string;
+
+  readonly VITE_PROJECT_LINK_ICON_COMPONENT: string;
 }
 
 interface ImportMeta {

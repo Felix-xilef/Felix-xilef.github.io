@@ -116,6 +116,10 @@ export default new AppMessages({
           title: 'Chess Game',
           description: 'A local multiplayer chess game made with Unity, localization and an interface built with UI Toolkit.',
         },
+        iconComponent: {
+          title: 'Icon Component',
+          description: 'An Unity UI Toolkit component for simple usage of icon fonts at the UI.',
+        },
       },
     },
 
