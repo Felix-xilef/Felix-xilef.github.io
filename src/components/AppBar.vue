@@ -34,7 +34,7 @@ function goBack() {
     >
       <v-col cols="auto">
         <router-link :to="{ name: RouteName.HOME }">
-          <AppLogo height="1.75rem"/>
+          <AppLogo height="2.5rem"/>
         </router-link>
       </v-col>
 
