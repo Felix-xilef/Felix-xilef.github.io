@@ -1,4 +1,4 @@
-import { mdiAndroid, mdiArrowLeft, mdiCalendarRange, mdiCertificate, mdiCheck, mdiContentCopy, mdiDatabase, mdiDownload, mdiEmail, mdiFileDocument, mdiGithub, mdiLanguageC, mdiLanguageCpp, mdiLanguageCsharp, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageTypescript, mdiLinkedin, mdiOfficeBuildingMarker, mdiPrinter, mdiSchool, mdiTranslateVariant, mdiUnity, mdiWhatsapp } from "@mdi/js";
+import { mdiAndroid, mdiArrowLeft, mdiCalendarRange, mdiCertificate, mdiCheck, mdiContentCopy, mdiDatabase, mdiDownload, mdiEmail, mdiFileDocument, mdiGithub, mdiLanguageC, mdiLanguageCpp, mdiLanguageCsharp, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJavascript, mdiLanguageTypescript, mdiLinkedin, mdiOfficeBuildingMarker, mdiOpenInNew, mdiPrinter, mdiSchool, mdiTranslateVariant, mdiUnity, mdiWhatsapp } from "@mdi/js";
 import type { IconAliases } from "vuetify";
 import { aliases } from "vuetify/iconsets/mdi-svg";
 
@@ -29,4 +29,5 @@ export const mdiAliases: Partial<IconAliases> = {
   'mdi-translate-variant': mdiTranslateVariant,
   'mdi-whatsapp': mdiWhatsapp,
   'mdi-unity': mdiUnity,
+  'mdi-open-in-new': mdiOpenInNew,
 };

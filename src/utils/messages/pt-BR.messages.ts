@@ -107,6 +107,22 @@ export default new AppMessages({
       ],
     },
 
+    projects: {
+      title: 'Projetos',
+      hiddenExploreButton: 'Conferir projeto',
+      smallerExploreButton: 'Conferir',
+      items: {
+        chessGame: {
+          title: 'Jogo de Xadrez',
+          description: 'Um jogo de xadrez para 2 jogadores local feito com Unity, localizado e interface feita com o UI Toolkit.',
+        },
+        iconComponent: {
+          title: 'Componente de Ícones',
+          description: 'Um componente para o UI Toolkit da Unity que facilita o uso de ícones através de fontes na interface.',
+        },
+      },
+    },
+
     knowledge: {
       title: 'Conhecimentos',
       languages: 'Linguagens',
