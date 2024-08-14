@@ -25,7 +25,7 @@ import CurriculumSheetHead from './CurriculumSheetHead.vue';
   padding: 15px 25px;
 
   .curriculum-sheet-head {
-    padding-bottom: 2rem;
+    padding-bottom: .75rem;
   }
 
   & :deep() {
