@@ -183,7 +183,7 @@ export default new AppMessages({
             },
             {
               title: 'Assistente de Desenvolvimento - Smart Staff',
-              description: 'Em Março de 2022, fui contratado como assitente. Sendo responsável, principalmente, pelo desenvolvimento e manutenção de um sistema de controle de insumos e um sistema de controle de horário com foto e geolocalização.',
+              description: 'Em Março de 2022, fui contratado como assitente. Sendo responsável pelo desenvolvimento e manutenção de um sistema de controle de insumos e outro de controle de horário com foto e geolocalização.',
               mainTechnologies: [
                 BrandStyle.VUE,
                 BrandStyle.ANGULAR,
@@ -193,7 +193,7 @@ export default new AppMessages({
             },
             {
               title: 'Desenvolvedor de Sistemas Júnior III - Smart Staff',
-              description: 'De Agosto de 2022 até Dezembro de 2023, atuei como desenvolvedor de sistemas júnior. Trabalhando, na maior parte do tempo, com os mesmos sistemas, porém também participando das novas solução desenvolvidas pela equipe.',
+              description: 'De Agosto de 2022 até Dezembro de 2023, atuei como desenvolvedor de sistemas júnior. Trabalhando, em grande parte, com os mesmos sistemas, porém também participei das novas soluções desenvolvidas pela equipe.',
               mainTechnologies: [
                 BrandStyle.VUE,
                 BrandStyle.VUETIFY,
