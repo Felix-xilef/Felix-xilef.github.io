@@ -114,7 +114,7 @@ export default new AppMessages({
       items: {
         chessGame: {
           title: 'Chess Game',
-          description: 'A local multiplayer chess game made with Unity, localization and an interface built with UI Toolkit.',
+          description: 'A chess game made with Unity, with options to play versus the computer or another local player.',
         },
         iconComponent: {
           title: 'Icon Component',
