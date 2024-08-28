@@ -114,7 +114,7 @@ export default new AppMessages({
       items: {
         chessGame: {
           title: 'Jogo de Xadrez',
-          description: 'Um jogo de xadrez para 2 jogadores local feito com Unity, localizado e interface feita com o UI Toolkit.',
+          description: 'Um jogo de xadrez feito com Unity, com opção para jogar contra o computador ou com outro jogador local.',
         },
         iconComponent: {
           title: 'Componente de Ícones',
