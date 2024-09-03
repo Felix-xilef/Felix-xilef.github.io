@@ -11,7 +11,7 @@ export default new AppMessages({
   home: {
     presentation: {
       title: 'Hello, I am Felix!',
-      description: 'I graduated in System Analysis and Development at Fatec São Caetano do Sul and completed post-graduation in Game Development at Unopar. I have about 2 and a half years of experience working with FullStack development and, currently, I\'m looking for an opportunity in the gaming industry.',
+      description: 'I graduated in System Analysis and Development at Fatec São Caetano do Sul and completed post-graduation in Game Development at Unopar. I have 2 years and 8 months of experience working with FullStack development, in addition to personal game projects.',
 
       profilePictureAlt: 'Profile Photo',
     },
@@ -139,7 +139,7 @@ export default new AppMessages({
       body: {
         presentation: {
           title: 'Introduction',
-          description: 'Hello, my name is Felix, I have about 2 and a half years of experience working with FullStack development and, after completing an specialization in Game Development, I\'m looking for and opportunity in the gaming industry. Currently, I have experience with Unity and C#',
+          description: 'Hello, my name is Felix, I have 2 years and 8 months of experience working with FullStack development and additional experience with personal Game Development projects using mainly Unity and C#',
         },
         college: {
           title: 'Higher Education',
