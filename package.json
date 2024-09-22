@@ -16,6 +16,7 @@
     "@mdi/font": "7.0.96",
     "flag-icons": "^6.11.0",
     "pinia": "^2.1.4",
+    "portifolio": "file:",
     "roboto-fontface": "*",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4",
