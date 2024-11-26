@@ -6,6 +6,7 @@
 .cache
 dist
 .outdir
+.output
 
 # Node dependencies
 node_modules
