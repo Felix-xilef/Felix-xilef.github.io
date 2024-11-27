@@ -9,7 +9,7 @@ const {
 });
 
 function getFlagIcon(item: any) {
-  return `custom:flag-${item.raw.language}`;
+  return `custom:flag-${item?.raw?.language}`;
 }
 </script>
 
@@ -27,6 +27,7 @@ function getFlagIcon(item: any) {
   >
     <template v-slot:selection="{ item }">
       <v-icon
+        v-if="item?.raw?.language"
         :icon="getFlagIcon(item)"
       ></v-icon>
     </template>

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import LanguageSelect from '../LanguageSelect.vue';
+import AppLogo from './AppLogo.vue';
+
 const { xs: displayIsXs } = useDisplay();
 </script>
 
